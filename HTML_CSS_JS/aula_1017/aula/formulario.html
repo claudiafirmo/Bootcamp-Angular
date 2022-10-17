@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=[device-width], initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form>
+        Login:<br>
+        <input type="text" name="login" id="login">
+        <br>
+        Senha: <br>
+        <input type="password" name="password" id="password">
+        <br>
+        <button type="submit" value="Entrar">Entrar</button>
+        <hr>
+    </form>
+    <h2>Cadastre-se</h2>
+    <form>
+        Login:<br>
+        <input type="email" name="login" id="login">
+        <br>
+        <h2>Gênero:</h2>
+        <input type="radio" id="HC" value="HC" name="genero">
+        <label for="HC">Homem Cis</label><br>
+        <input type="radio" id="MC" value="MC" name="genero">
+        <label for="MC">Mulher Cis</label><br>
+        <input type="radio" id="HT" value="HT" name="genero">
+        <label for="HT">Homem Trans</label><br>
+        <input type="radio" id="MTT" value="MTT" name="genero">
+        <label for="MTT">Mulher Trans/Travesti</label><br>
+        <input type="radio" id="NB" value="NB" name="genero">
+        <label for="NB">Não-Binário</label><br>
+        <input type="radio" id="NI" value="NI" name="genero">
+        <label for="NI">Prefiro não responder</label><br>
+        
+        <h2>Interesses:</h2>
+        <input type="checkbox" name="interesse" id="futebol">
+        <label for="futebol">Futebol</label><br>
+        <input type="checkbox" name="interesse" id="moda">
+        <label for="moda">Moda</label><br>
+        <input type="checkbox" name="interesse" id="programacao">
+        <label for="progamacao">Programação</label><br>
+
+        <h2>Estado</h2>
+        <select name="estado" id="estado">
+            <option value="N/A" disabled request selected>Selecione</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+        </select>
+        <h3>Observações: </h3>
+        <textarea name="" id="" cols="70" rows="10" placeholder="Conte mais sobre você"></textarea><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
