@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO FUNÇÕES</title>
+    <script>
+        function calculo(){
+            n1 = parseFloat(document.getElementById("n1").value);
+            n2 = parseFloat(document.getElementById("n2").value);
+            op = document.getElementById("op").value;
+            console.log(op);
+            if(op == 'soma'){
+                document.write('O resultado é : ' + (n1 + n2));
+            } else{
+                document.write('O resultado é : ' + (n1 - n2));
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Calculadora de soma ou subtração</h1>
+    <label for="n1">Informe o 1° número:</label>
+    <input type="number" id="n1"><br>
+    <label for="n2">Informe o 2° número:</label>
+    <input type="number" id="n2"><br>
+    <label for="n2">Selecione a operação</label>
+    <select name="operação" id="op">
+        <option value="" disabled selected>Selecione</option>
+        <option value="soma">soma</option>
+        <option value="subtracao">subtração</option>
+    </select><br>
+    <button type="button" onclick="calculo()">Calcular</button>
+    
+</body>
+</html>
