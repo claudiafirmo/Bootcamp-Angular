@@ -92,6 +92,8 @@ function ladoAleatorio(){
     };
 }
 
+
+// tentando implementar tela de game over
 function gameOver(){
     var fimDeJogo = document.createElement('img');
     fimDeJogo.src = 'img/game_over.png';
