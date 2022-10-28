@@ -1,0 +1,4 @@
+.margem {
+    max-width: 300px;
+    margin: auto; /*Ajusta margem usando o elemento anterior (hierarquico)*/
+}
