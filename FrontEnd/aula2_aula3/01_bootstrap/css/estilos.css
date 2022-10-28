@@ -1,0 +1,9 @@
+.margem {
+    max-width: 300px;
+    margin: auto;  /*Ajusta margem usando o elemento anterior (hierarquico) */
+    margin-top: 30px;
+}
+#resposta{
+    margin-top: 10px;
+    font-size: 20px;
+}

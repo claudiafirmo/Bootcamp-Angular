@@ -1,0 +1,58 @@
+para V = 1 até 12 passo +1
+   MAT[V, 1] = "V"
+próximo V
+
+para D = 2 até 11 passo +1
+   MAT[D, D]  = "D"
+próximo D
+
+para H = 2 até 12 passo +1
+   MAT[12, H] = "H"
+próximo H
+----------------------------------------------------------
+para V = 2 até 13 passo +1
+   T1[V, 5]  = "V"
+próximo V
+
+para D = 3 até 12 passo +1
+    T1[D, D + 3] = "D"
+próximo D
+
+para H = 6 até 16 passo +1
+   T1[13, H]  = "H"
+---------------------------------------------------------
+para E = 4 até 11 passo +1
+   TELA[E, 13 - E] = "E"
+próximo E
+
+para D = 3 até 11 passo +1
+   TELA[D, 7 + D] = "D"
+próximo D
+
+para H = 1 até 19
+   TELA[12, H] = "H"
+------------------------------------------------------
+para i  = 3 até 7 passo +1
+   para j = 9 - i até i + 3 passo +1
+      TELA[i , j] = "X"
+   próximo j
+próximo i
+-----------------------------------------------------
+para i = 3 até 11 passo +1
+    para = j = 3 até 8 passo +1
+       Retangulo[i, j] = "R"
+    proximo j
+proximo i
+----------------------------------------------------
+para i = 1 até 7 passo +2
+ para j = 1 até 7 passo +2
+   Xadrex[i, j] = "X"
+ próximo j
+próximo i
+
+para i = 2 até 8 passo +2
+  para j = 2 até 8 passo +2
+   Xadrez[i, j] = "X"
+  próximo j
+próximo i
+----------------------------------------------------
