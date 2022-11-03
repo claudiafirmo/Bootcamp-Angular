@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo02</title>
+</head>
+<body>
+    <input type="text" id="curso">
+    <button id="btn">Mostrar mensagem</button>
+    <div id="resposta"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        // quando o usuario clicar no botao, o conteudo de entrada será lido e uma nova mensagem será apresentada dentro da div.
+
+        // o script rodará quando toda página html estiver carregada
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                let curso = $('#curso').val();
+                let mensagem = 'Curso informado: ' + curso;
+                $('#resposta').html(mensagem);
+            });
+        });
+        
+    </script>
+</body>
+</html>
