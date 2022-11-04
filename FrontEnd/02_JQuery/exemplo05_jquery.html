@@ -32,12 +32,12 @@
             
             <div class="mb-3">
                 <label class="form-label">Vale-transporte:</label>
-                <input type="text" class="form-control" id="vt" />
+                <input type="text" class="form-control" id="vt" readonly/>
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Salário Líquido:</label>
-                <input type="text" class="form-control" id="liquido"/>
+                <input type="text" class="form-control" id="liquido" readonly/>
             </div>
         </div>
     </div>
@@ -48,20 +48,18 @@
             $('#btnCalcular').click(function(){
                 let salario = parseFloat($('#salario').val());
                 let transporte = parseFloat($('#transporte').val());
-                const descontoPerCent = 0.06;
-                let vtPc;
+                
+                // calculando 6% do salario
+                let desconto = salario * 0.06
 
-                let liquido = salario * descontoPerCent;
-
-                if(liquido  >= transporte){
-                    vtPc = 0
-                    liquido  = transporte;
-                }else{
-                    vtPc = descontoPerCent * 100
+                //ajustando o valor
+                if(desconto > transporte){
+                    desconto = transporte
                 }
 
-                $('#vt[value]').html(`${vtPc}%`)
-                $('#liquido').html(`R$ ${liquido}`)
+                $('#vt').val(`R$ ${desconto}`);
+                $('#liquido').val(`R$ ${salario - desconto}`);
+
             });
         });
     </script>

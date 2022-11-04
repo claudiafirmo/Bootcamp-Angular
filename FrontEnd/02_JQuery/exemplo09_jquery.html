@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Exemplo 09 - Cidades e Estados</title>
+    <style>
+        .borda{
+            margin: auto;
+            margin-top: 30px;
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container borda">
+        <h2 class="display-2">Estados e Cidades</h2>
+        <div class="mb-3">
+            <label for="estado" class="form-label">Estado:</label>
+            <select class="form-select" id="estado">
+                
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="cidade" class="form-label">Cidade:</label>
+            <select class="form-select" id="cidade">
+
+            </select>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        let estados = [
+            {id: 1, estado: 'SP'},
+            {id: 2, estado: 'RJ'},
+            {id: 3, estado: 'MG'},
+            {id: 4, estado: 'BA'}
+        ];
+        
+        let cidades = [
+            {id: 1, idEstado:1, cidade: 'Campinas'},
+            {id: 2, idEstado:1, cidade: 'São Paulo'},
+            {id: 3, idEstado:1, cidade: 'Iacri'},
+            {id: 4, idEstado:2, cidade: 'Angra dos Reis'},
+            {id: 5, idEstado:2, cidade: 'Niterói'},
+            {id: 6, idEstado:3, cidade: 'Belo Horizonte'},
+            {id: 7, idEstado:3, cidade: 'Uberlândia'},
+            {id: 8, idEstado:4, cidade: 'Salvador'},
+            {id: 9, idEstado:4, cidade: 'Feira de Santana'}
+        ];
+
+        $(document).ready(function(){
+            $('#estado').html('<option>Selecione um estado</option>');
+            // listando os estados
+            $.each(estados, function(indice, item){
+                //no select estado, adiciona um option com value = item.id e text = item.estado
+                $('#estado').append($('<option>', {value: item.id, text: item.estado}));
+                });
+//-----------------------------------------------------------------------------------------------        
+            $('#cidade').html('<option>Selecione uma cidade</option>');
+            $('#cidade').val($('option :selected').val())
+            console.log($('#estado :selected').val());
+            console.log($('#cidade').val());
+            $.each(cidades, function(indice, item){
+                if(item.idEstado == $('#estado :selected').val()){
+                    $('#cidade').append($('<option>', {value: item.id, text: item.cidade}));
+            }
+            });
+        });
+    </script>
+</body>
+</html>
