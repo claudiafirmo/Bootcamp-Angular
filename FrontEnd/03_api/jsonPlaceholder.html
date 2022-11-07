@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuários - jsonplaceholder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container">
+        <h2 class="display-4">Lista de Usuários </h2>
+        <div>
+            <input type="button" class="btn btn-primary" id="btnBuscar" value="Buscar" />
+        </div>
+        <table class="table table-striped" id="tabela">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Endereço (Rua, Complemento, Cidade)</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btnBuscar').click(function(){
+                $.ajax({
+                    dataType: 'json',
+                    url: `https://jsonplaceholder.typicode.com/users`,
+                    method: 'GET',
+                    success: function(resposta){
+                        $('tbody:has(tr)').empty();
+                       $.each(resposta, function(indice, item){
+                            $('tbody').append(`<tr>
+                                <td>${item.id}</td>
+                                <td>${item.name}</td>
+                                <td>${item.username}</td>
+                                <td>${item.email}</td>
+                                <td>${item.phone}</td>
+                                <td>${item.address.street}, ${item.address.suite}, ${item.address.city}</td>
+                                </tr><br>`)
+                       });
+                    },
+                    error: function(erro){
+                        alert(erro.responseText)
+                    }
+                })
+            });
+        });
+    </script>
+</body>
+</html>
