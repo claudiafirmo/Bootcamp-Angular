@@ -59,16 +59,28 @@
             $.each(estados, function(indice, item){
                 //no select estado, adiciona um option com value = item.id e text = item.estado
                 $('#estado').append($('<option>', {value: item.id, text: item.estado}));
+            });
+            
+            
+            $('#estado').change(function(){
+                // this = Se refere ao próprio elemento que executa o evento
+                let id_estado = $(this).val();
+
+                // filtrando cidades pelo idEstado
+                let cidadesFiltradas = $.grep(cidades, function(elemento){
+                    return elemento.idEstado == id_estado;
                 });
-//-----------------------------------------------------------------------------------------------        
-            $('#cidade').html('<option>Selecione uma cidade</option>');
-            $('#cidade').val($('option :selected').val())
-            console.log($('#estado :selected').val());
-            console.log($('#cidade').val());
-            $.each(cidades, function(indice, item){
-                if(item.idEstado == $('#estado :selected').val()){
-                    $('#cidade').append($('<option>', {value: item.id, text: item.cidade}));
-            }
+
+                // caso seja selecionado outro estado, ele sobrepoe o conteudo que existia.
+                $('#cidade').html('<option>Selecione a cidade</option>')
+                // listando cidades da sublista no elemento select com id = cidade
+                $.each(cidadesFiltradas, function(indice, item){
+                    $('#cidade').append( $('<option>', {
+                        text: item.cidade,
+                        value: item.id
+                    }) );
+                });
+
             });
         });
     </script>
