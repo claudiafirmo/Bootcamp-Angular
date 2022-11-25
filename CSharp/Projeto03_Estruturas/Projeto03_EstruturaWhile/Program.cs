@@ -10,9 +10,11 @@ namespace Projeto03_EstruturaWhile
     {
         static void Main(string[] args)
         {
-            Console.Write("Informe um valor entre 0 e 10: ");
-            int numero = int.Parse(Console.ReadLine());
-            while(numero < 5)
+            //Console.Write("Informe um valor entre 0 e 10: ");
+            //int numero = int.Parse(Console.ReadLine());
+            Random rand = new Random();
+            int numero = rand.Next(0, 10);
+            while (numero < 5)
             {
                 Console.WriteLine($"Número: {numero}");
                 numero++;
