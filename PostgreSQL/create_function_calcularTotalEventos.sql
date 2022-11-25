@@ -12,15 +12,10 @@ begin
 		administracao.tb_convidados c 
 		inner join administracao.tb_inscricoes i on i.idconvidado = c.id
 		inner join administracao.tb_eventos e on i.idevento = e.id
+		where c.id = idconv
 	group by c.id;
 	
 	return valorTotal;
 end
 $$
 language plpgsql;
-
-select  c.id, administracao.CalcularTotalEventos(c.id) as "valor total pago"
-from administracao.tb_convidados c inner join administracao.tb_inscricoes i on i.idconvidado = c.id
-		join administracao.tb_eventos e on i.idevento = e.id
-group by c.id
-order by c.id;

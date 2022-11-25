@@ -1,0 +1,8 @@
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile\bin\Debug\Projeto03_EstruturaWhile.exe.config
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile\bin\Debug\Projeto03_EstruturaWhile.exe
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile\bin\Debug\Projeto03_EstruturaWhile.pdb
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile\obj\Debug\Projeto03_EstruturaWhile01.csproj.AssemblyReference.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile\obj\Debug\Projeto03_EstruturaWhile01.csproj.SuggestedBindingRedirects.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile\obj\Debug\Projeto03_EstruturaWhile01.csproj.CoreCompileInputs.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile\obj\Debug\Projeto03_EstruturaWhile.exe
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile\obj\Debug\Projeto03_EstruturaWhile.pdb

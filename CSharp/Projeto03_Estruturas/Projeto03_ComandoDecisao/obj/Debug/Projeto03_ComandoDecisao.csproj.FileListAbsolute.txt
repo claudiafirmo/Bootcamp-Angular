@@ -6,3 +6,11 @@ C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_ComandoDecisao\obj\Debug\Projeto03_ComandoDecisao.csproj.CoreCompileInputs.cache
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_ComandoDecisao\obj\Debug\Projeto03_ComandoDecisao.exe
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_ComandoDecisao\obj\Debug\Projeto03_ComandoDecisao.pdb
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_ComandoDecisao\bin\Debug\Projeto03_ComandoDecisao.exe.config
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_ComandoDecisao\bin\Debug\Projeto03_ComandoDecisao.exe
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_ComandoDecisao\bin\Debug\Projeto03_ComandoDecisao.pdb
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_ComandoDecisao\obj\Debug\Projeto03_ComandoDecisao.csproj.AssemblyReference.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_ComandoDecisao\obj\Debug\Projeto03_ComandoDecisao.csproj.SuggestedBindingRedirects.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_ComandoDecisao\obj\Debug\Projeto03_ComandoDecisao.csproj.CoreCompileInputs.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_ComandoDecisao\obj\Debug\Projeto03_ComandoDecisao.exe
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_ComandoDecisao\obj\Debug\Projeto03_ComandoDecisao.pdb
