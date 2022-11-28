@@ -10,7 +10,7 @@ namespace Projeto01_ArraysNumericos
     {
         static void Main(string[] args)
         {
-            // Definindo Arrays de números inteiros
+            // Definindo Arrays de números inteiros:
             // Forma 1: criar o array e definir uma quantidade
             int[] numeros = new int[5];
             // [0,0,0,0,0]
@@ -26,10 +26,22 @@ namespace Projeto01_ArraysNumericos
             Console.WriteLine();
 
             // para cada item inteiro na coleção
-            foreach(int item in numeros)
+            foreach (int item in numeros)
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine();
+
+            // Forma 2: Na declaração do array, atribuir seus valores
+            int[] valores = { 10, 20, 30, 40 }; 
+            // forma completa - int[] valores = new int[] {10,20,30,40};
+            // ou int[] valores; valores = new int[]{10,20,30,40}
+
+            foreach(int elemento in valores)
+            {
+                Console.WriteLine(elemento);
+            }
+
 
             Console.ReadKey();
         }
