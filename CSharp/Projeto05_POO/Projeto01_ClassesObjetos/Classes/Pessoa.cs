@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClassesObjetos.Enumeracoes;
+using ClassesObjetos.Estruturas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,6 +42,16 @@ namespace ClassesObjetos.Classes
             }
         }
 
+        // Propriedade Sexo: Forma reduzida
+        public Sexos Sexo { get; set; }
 
+        // Propriedade Endereco: Forma reduzida
+        public Endereco EnderecoInfo { get; set; }
+
+        public string LerPessoa()
+        {
+            string resposta = $"Nome: {Nome}\nIdade: {Idade}\nSexo: {Sexo}\nDados do endereço:\n{EnderecoInfo.LerEndereco()}";
+            return resposta;
+        }
     }
 }
