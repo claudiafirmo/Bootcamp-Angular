@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto01_ClassesObjetos", "Projeto01_ClassesObjetos\Projeto01_ClassesObjetos.csproj", "{1649F413-EB1C-4714-9BCF-9D21968E34B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto02_HerancaPolimorfismo", "Projeto02_HerancaPolimorfismo\Projeto02_HerancaPolimorfismo.csproj", "{C0E5660A-EBD7-463A-80AD-265EE3D1BC14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaClasses", "BibliotecaClasses\BibliotecaClasses.csproj", "{91B275EC-2774-4F55-A6AD-180B55F463E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{1649F413-EB1C-4714-9BCF-9D21968E34B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1649F413-EB1C-4714-9BCF-9D21968E34B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1649F413-EB1C-4714-9BCF-9D21968E34B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E5660A-EBD7-463A-80AD-265EE3D1BC14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E5660A-EBD7-463A-80AD-265EE3D1BC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E5660A-EBD7-463A-80AD-265EE3D1BC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E5660A-EBD7-463A-80AD-265EE3D1BC14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91B275EC-2774-4F55-A6AD-180B55F463E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91B275EC-2774-4F55-A6AD-180B55F463E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91B275EC-2774-4F55-A6AD-180B55F463E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91B275EC-2774-4F55-A6AD-180B55F463E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

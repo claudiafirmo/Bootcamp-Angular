@@ -48,9 +48,17 @@ namespace ClassesObjetos.Classes
         // Propriedade Endereco: Forma reduzida
         public Endereco EnderecoInfo { get; set; }
 
-        public string LerPessoa()
+        public virtual string LerPessoa()
         {
-            string resposta = $"Nome: {this.Nome}\nIdade: {this.Idade}\nSexo: {this.Sexo}\nDados do endereço:\n{this.EnderecoInfo.LerEndereco()}";
+            string resposta = $"Nome: {this.Nome}\nIdade: {this.Idade}\nSexo: {this.Sexo}\n";
+                // se endereço nao tiver logradouro, assumiremos que ele nao existe
+                if (!string.IsNullOrEmpty(this.EnderecoInfo.Logradouro))
+            {
+                resposta += $"Dados do endereço:\n{this.EnderecoInfo.LerEndereco()}";
+                //$"{this.EnderecoInfo.LerEndereco()}";
+            }
+
+
             return resposta;
         }
     }
