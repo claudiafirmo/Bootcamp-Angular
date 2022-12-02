@@ -75,8 +75,39 @@ namespace Projeto02_HerancaPolimorfismo
 
         public static void LerDadosPessoaFuncionario()
         {
-            Pessoa pessoa = new Funcionario();
-            object obj = new Funcionario();
+            Pessoa pessoa = new Funcionario()
+            {
+                Nome = "Joseph",
+                Idade = 50,
+                Sexo = Sexos.Masculino,
+                Cargo = "Marinheiro",
+                Salario = 5000.00
+            };
+            /*
+             * o método executado é o método polimorfico (sobrescrito) referente ao objeto.
+             * Ou seja, quem executa o método é o objeto.
+             */
+
+            MessageBox.Show(pessoa.LerPessoa());
+
+            pessoa = new Pessoa()
+            {
+                Nome = "Joseph",
+                Idade = 50,
+                Sexo = Sexos.Masculino
+            };
+
+            MessageBox.Show(pessoa.LerPessoa());
+
+            pessoa = new Aluno()
+            {
+                Nome = "Joseph",
+                Idade = 50,
+                Sexo = Sexos.Masculino,
+                Curso = "Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas",
+                Matricula = 124682
+            };
+            MessageBox.Show(pessoa.LerPessoa());
         }
     }
 }

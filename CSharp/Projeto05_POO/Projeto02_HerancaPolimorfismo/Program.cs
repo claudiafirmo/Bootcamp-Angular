@@ -17,7 +17,7 @@ namespace Projeto02_HerancaPolimorfismo
         static void Main(string[] args)
         {
             //Metodos.LerDadosPessoa();
-            Metodos.LerDadosFuncionario();
+            Metodos.LerDadosPessoaFuncionario();
         }
     }
 }
