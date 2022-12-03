@@ -1,0 +1,8 @@
+D:\DEV MANDA\Bootcamp-Angular\CSharp\EstudandoApostilaCSharp\ClassesAbstratasVSInterfaces\bin\Debug\ClassesAbstratasVSInterfaces.exe.config
+D:\DEV MANDA\Bootcamp-Angular\CSharp\EstudandoApostilaCSharp\ClassesAbstratasVSInterfaces\bin\Debug\ClassesAbstratasVSInterfaces.exe
+D:\DEV MANDA\Bootcamp-Angular\CSharp\EstudandoApostilaCSharp\ClassesAbstratasVSInterfaces\bin\Debug\ClassesAbstratasVSInterfaces.pdb
+D:\DEV MANDA\Bootcamp-Angular\CSharp\EstudandoApostilaCSharp\ClassesAbstratasVSInterfaces\obj\Debug\ClassesAbstratasVSInterfaces.csproj.AssemblyReference.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\EstudandoApostilaCSharp\ClassesAbstratasVSInterfaces\obj\Debug\ClassesAbstratasVSInterfaces.csproj.SuggestedBindingRedirects.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\EstudandoApostilaCSharp\ClassesAbstratasVSInterfaces\obj\Debug\ClassesAbstratasVSInterfaces.csproj.CoreCompileInputs.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\EstudandoApostilaCSharp\ClassesAbstratasVSInterfaces\obj\Debug\ClassesAbstratasVSInterfaces.exe
+D:\DEV MANDA\Bootcamp-Angular\CSharp\EstudandoApostilaCSharp\ClassesAbstratasVSInterfaces\obj\Debug\ClassesAbstratasVSInterfaces.pdb
