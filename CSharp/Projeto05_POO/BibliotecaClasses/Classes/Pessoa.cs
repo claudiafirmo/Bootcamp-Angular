@@ -50,16 +50,34 @@ namespace ClassesObjetos.Classes
 
         public virtual string LerPessoa()
         {
-            string resposta = $"Nome: {this.Nome}\nIdade: {this.Idade}\nSexo: {this.Sexo}\n";
+            string cabecalho = "DADOS DA PESSOA:";
+
+            string resposta = $"{cabecalho}\nNome: {this.Nome}\nIdade: {this.Idade}\nSexo: {this.Sexo}\n";
                 // se endereço nao tiver logradouro, assumiremos que ele nao existe
                 if (!string.IsNullOrEmpty(this.EnderecoInfo.Logradouro))
             {
                 resposta += $"Dados do endereço:\n{this.EnderecoInfo.LerEndereco()}";
                 //$"{this.EnderecoInfo.LerEndereco()}";
             }
-
-
             return resposta;
+        }
+
+        public virtual string LerPessoa(string cabecalho)
+        {
+            string resposta = $"{cabecalho}\nNome: {this.Nome}\nIdade: {this.Idade}\nSexo: {this.Sexo}\n";
+            // se endereço nao tiver logradouro, assumiremos que ele nao existe
+            if (!string.IsNullOrEmpty(this.EnderecoInfo.Logradouro))
+            {
+                resposta += $"Dados do endereço:\n{this.EnderecoInfo.LerEndereco()}";
+                //$"{this.EnderecoInfo.LerEndereco()}";
+            }
+            return resposta;
+        }
+
+        // Sobrescrevendo o metodo ToString()
+        public override string ToString()
+        {
+            return  $"USANDO O MÉTODO ToString()\n\n{this.LerPessoa()}";
         }
     }
 }

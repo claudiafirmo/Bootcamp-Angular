@@ -2,11 +2,6 @@
 using ClassesObjetos.Enumeracoes;
 using ClassesObjetos.Estruturas;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projeto02_HerancaPolimorfismo
@@ -83,6 +78,13 @@ namespace Projeto02_HerancaPolimorfismo
                 Cargo = "Marinheiro",
                 Salario = 5000.00
             };
+            // apos o objeto ter sido criado, como podemos fazer para acessar as propriedades especificas do objeto (Cargo e Salario)
+            if(pessoa is Funcionario) 
+            {
+                Funcionario func = (Funcionario)pessoa; 
+                func.Cargo = "Cozinheiro";
+            }
+
             /*
              * o método executado é o método polimorfico (sobrescrito) referente ao objeto.
              * Ou seja, quem executa o método é o objeto.
@@ -96,6 +98,7 @@ namespace Projeto02_HerancaPolimorfismo
                 Idade = 50,
                 Sexo = Sexos.Masculino
             };
+            
 
             MessageBox.Show(pessoa.LerPessoa());
 
@@ -107,7 +110,19 @@ namespace Projeto02_HerancaPolimorfismo
                 Curso = "Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas",
                 Matricula = 124682
             };
+
+
+            if (pessoa is Aluno)
+            {
+                Aluno aluno = pessoa as Aluno;
+                aluno.Curso = "Pedagogia"; 
+            }
+
             MessageBox.Show(pessoa.LerPessoa());
+
+            object obj = pessoa;
+
+            MessageBox.Show(obj.ToString());
         }
     }
 }
