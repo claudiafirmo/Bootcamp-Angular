@@ -122,7 +122,7 @@ namespace Projeto02_HerancaPolimorfismo
 
             object obj = pessoa;
 
-            MessageBox.Show(obj.ToString());
+            MessageBox.Show(obj.ToString(), "Objeto Pessoa", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
