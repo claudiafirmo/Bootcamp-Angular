@@ -26,3 +26,17 @@ C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto06_Construtores\Projeto
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto06_Construtores\Projeto01.Views\obj\Debug\Projeto01.Views.csproj.CopyComplete
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto06_Construtores\Projeto01.Views\obj\Debug\Projeto01.Views.exe
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto06_Construtores\Projeto01.Views\obj\Debug\Projeto01.Views.pdb
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\bin\Debug\Projeto01.Views.exe.config
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\bin\Debug\Projeto01.Views.exe
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\bin\Debug\Projeto01.Views.pdb
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\bin\Debug\BibliotecaClasses.dll
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\bin\Debug\BibliotecaClasses.pdb
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.csproj.AssemblyReference.cache
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.csproj.SuggestedBindingRedirects.cache
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.FormCadastro.resources
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.Properties.Resources.resources
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.csproj.GenerateResource.cache
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.csproj.CoreCompileInputs.cache
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.csproj.CopyComplete
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.exe
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.pdb

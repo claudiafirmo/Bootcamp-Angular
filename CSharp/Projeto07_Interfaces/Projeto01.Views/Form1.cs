@@ -1,6 +1,7 @@
 ﻿using ClassesObjetos.Classes;
 using ClassesObjetos.Enumeracoes;
 using ClassesObjetos.Estruturas;
+using ClassesObjetos.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,24 +49,46 @@ namespace Projeto01.Views
 
         private void incluirButton_Click(object sender, EventArgs e)
         {
-            // Obtendo os dados da classe Funcionario
-            Funcionario funcionario = new Funcionario(nomeTextBox.Text, cargoTextBox.Text, double.Parse(salarioTextBox.Text));
-            funcionario.Idade = int.Parse(idadeTextBox.Text);
-            funcionario.Sexo = (Sexos)sexoComboBox.SelectedItem;
-
-            if (enderecoCheckBox.Checked)
+            try
             {
-                Endereco endereco = new Endereco()
+                string doc = documentoTextBox.Text;
+                IDocumento documento;
+                if (doc.Length == 11)
                 {
-                    Logradouro = logradouroTextBox.Text,
-                    Numero = int.Parse(numeroTextBox.Text),
-                    Cidade = cidadeTextBox.Text,
-                    Cep = cepTextBox.Text,
-                };
-                funcionario.EnderecoInfo = endereco;
-            }
+                    documento = new DocumentoCpf(doc);
+                }
+                else if (doc.Length == 14)
+                {
+                    documento = new DocumentoCnpj(doc);
+                }
+                else
+                {
+                    throw new InvalidOperationException("O documento informado é inválido");
+                }
 
-            MessageBox.Show(funcionario.ToString());
+                // Obtendo os dados da classe Funcionario
+                Funcionario funcionario = new Funcionario(documento, nomeTextBox.Text, cargoTextBox.Text, double.Parse(salarioTextBox.Text));
+                funcionario.Idade = int.Parse(idadeTextBox.Text);
+                funcionario.Sexo = (Sexos)sexoComboBox.SelectedItem;
+
+                if (enderecoCheckBox.Checked)
+                {
+                    Endereco endereco = new Endereco()
+                    {
+                        Logradouro = logradouroTextBox.Text,
+                        Numero = int.Parse(numeroTextBox.Text),
+                        Cidade = cidadeTextBox.Text,
+                        Cep = cepTextBox.Text,
+                    };
+                    funcionario.EnderecoInfo = endereco;
+                }
+
+                MessageBox.Show(funcionario.ToString(), "Dados do Funcionário",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Erro", MessageBoxButtons.OK,MessageBoxIcon.Error);  
+            }
         }
     }
 }

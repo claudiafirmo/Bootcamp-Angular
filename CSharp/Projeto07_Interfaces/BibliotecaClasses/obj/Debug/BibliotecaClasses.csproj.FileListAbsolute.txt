@@ -10,3 +10,9 @@ C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto06_Construtores\Bibliot
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto06_Construtores\BibliotecaClasses\obj\Debug\BibliotecaClasses.csproj.CoreCompileInputs.cache
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto06_Construtores\BibliotecaClasses\obj\Debug\BibliotecaClasses.dll
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto06_Construtores\BibliotecaClasses\obj\Debug\BibliotecaClasses.pdb
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\obj\Debug\BibliotecaClasses.csproj.AssemblyReference.cache
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\obj\Debug\BibliotecaClasses.csproj.CoreCompileInputs.cache
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\obj\Debug\BibliotecaClasses.dll
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\obj\Debug\BibliotecaClasses.pdb
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\bin\Debug\BibliotecaClasses.dll
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\bin\Debug\BibliotecaClasses.pdb

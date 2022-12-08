@@ -24,5 +24,10 @@ namespace ClassesObjetos.Classes
             return $"{base.LerPessoa()}\nCurso: {Curso.LerCurso()}\n" +
                 $"Matrícula: {Matricula}";
         }
+
+        public override string MostrarMensagem()
+        {
+            return "Mensagem";
+        }
     }
 }

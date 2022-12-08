@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ClassesObjetos.Classes
 {
-    public class Pessoa
+    public abstract class Pessoa
     {
         public Pessoa(string Nome)
         {
@@ -99,5 +99,7 @@ namespace ClassesObjetos.Classes
         {
             return  $"USANDO O MÉTODO ToString()\n\n{this.LerPessoa()}";
         }
+
+        public abstract string MostrarMensagem();   
     }
 }

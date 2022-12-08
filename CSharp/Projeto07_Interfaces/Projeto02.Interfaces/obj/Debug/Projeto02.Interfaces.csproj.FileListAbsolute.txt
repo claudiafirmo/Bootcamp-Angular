@@ -1,0 +1,11 @@
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto02.Interfaces\bin\Debug\Projeto02.Interfaces.exe.config
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto02.Interfaces\bin\Debug\Projeto02.Interfaces.exe
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto02.Interfaces\bin\Debug\Projeto02.Interfaces.pdb
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto02.Interfaces\bin\Debug\BibliotecaClasses.dll
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto02.Interfaces\bin\Debug\BibliotecaClasses.pdb
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto02.Interfaces\obj\Debug\Projeto02.Interfaces.csproj.AssemblyReference.cache
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto02.Interfaces\obj\Debug\Projeto02.Interfaces.csproj.SuggestedBindingRedirects.cache
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto02.Interfaces\obj\Debug\Projeto02.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto02.Interfaces\obj\Debug\Projeto02.Interfaces.csproj.CopyComplete
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto02.Interfaces\obj\Debug\Projeto02.Interfaces.exe
+C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto02.Interfaces\obj\Debug\Projeto02.Interfaces.pdb

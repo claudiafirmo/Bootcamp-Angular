@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassesObjetos.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace ClassesObjetos.Classes
 {
     public class Funcionario : Pessoa
     {
+        public IDocumento Documento{ get; set; }
+
         public string Cargo { get; set; }
         // 3° tipo de propriedade: Property Expression
         private double _salario;
@@ -26,21 +29,27 @@ namespace ClassesObjetos.Classes
         // analogamente, definiremos a propriedade SalarioLiquido como sendo somente-leitura
         public double SalarioLiquido => this.Salario - this.Irpf;
 
-        public Funcionario(string nome, string cargo) : base(nome)
+        public Funcionario(IDocumento documento, string nome, string cargo) : base(nome)
         {
+            this.Documento = documento;
             this.Cargo = cargo;
         }
 
-        public Funcionario(string nome, string cargo, double salario): this(nome, cargo)
+        public Funcionario(IDocumento documento, string nome, string cargo, double salario): this(documento, nome, cargo)
         {
             this.Salario = salario;
         }
 
         public override string LerPessoa()
         {
-            string resposta = $"{base.LerPessoa()}\nCargo: {Cargo}\nSalário Bruto: {Salario:c}\n" +
+            string resposta = $"{base.LerPessoa()}\nDocumento: {Documento.GetDocumento()}\nCargo: {Cargo}\nSalário Bruto: {Salario:c}\n" +
                 $"IRPF: {Irpf:c}\nSalário Líquido: {SalarioLiquido:c}";
             return resposta;
+        }
+
+        public override string MostrarMensagem()
+        {
+            return "Mensagem da classe abstrata Pessoa";
         }
     }
 }
