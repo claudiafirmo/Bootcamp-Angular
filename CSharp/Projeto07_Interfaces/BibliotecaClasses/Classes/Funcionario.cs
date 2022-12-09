@@ -47,6 +47,11 @@ namespace ClassesObjetos.Classes
             return resposta;
         }
 
+        public override string ToString()
+        {
+            return $"{this.Documento.Numero} - {this.Nome}";
+        }
+
         public override string MostrarMensagem()
         {
             return "Mensagem da classe abstrata Pessoa";

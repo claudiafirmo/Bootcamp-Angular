@@ -83,7 +83,7 @@ namespace Projeto01.Views
                     funcionario.EnderecoInfo = endereco;
                 }
 
-                MessageBox.Show(funcionario.ToString(), "Dados do Funcionário",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                funcionariosListBox.Items.Add(funcionario);
             }
             catch (Exception ex)
             {

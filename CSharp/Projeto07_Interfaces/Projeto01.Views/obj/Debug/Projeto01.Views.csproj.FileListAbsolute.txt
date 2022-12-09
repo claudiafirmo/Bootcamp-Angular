@@ -40,3 +40,17 @@ C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.csproj.CopyComplete
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.exe
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.pdb
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\bin\Debug\Projeto01.Views.exe.config
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\bin\Debug\Projeto01.Views.exe
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\bin\Debug\Projeto01.Views.pdb
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\bin\Debug\BibliotecaClasses.dll
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\bin\Debug\BibliotecaClasses.pdb
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.csproj.AssemblyReference.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.csproj.SuggestedBindingRedirects.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.FormCadastro.resources
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.Properties.Resources.resources
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.csproj.GenerateResource.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.csproj.CoreCompileInputs.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.csproj.CopyComplete
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.exe
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto01.Views\obj\Debug\Projeto01.Views.pdb

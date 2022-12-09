@@ -16,3 +16,9 @@ C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Bibliotec
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\obj\Debug\BibliotecaClasses.pdb
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\bin\Debug\BibliotecaClasses.dll
 C:\Users\scania\Documents\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\bin\Debug\BibliotecaClasses.pdb
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\bin\Debug\BibliotecaClasses.dll
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\bin\Debug\BibliotecaClasses.pdb
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\obj\Debug\BibliotecaClasses.csproj.AssemblyReference.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\obj\Debug\BibliotecaClasses.csproj.CoreCompileInputs.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\obj\Debug\BibliotecaClasses.dll
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\BibliotecaClasses\obj\Debug\BibliotecaClasses.pdb

@@ -1,0 +1,8 @@
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto03.Listas\bin\Debug\Projeto03.Listas.exe.config
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto03.Listas\bin\Debug\Projeto03.Listas.exe
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto03.Listas\bin\Debug\Projeto03.Listas.pdb
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto03.Listas\obj\Debug\Projeto03.Listas.csproj.AssemblyReference.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto03.Listas\obj\Debug\Projeto03.Listas.csproj.SuggestedBindingRedirects.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto03.Listas\obj\Debug\Projeto03.Listas.csproj.CoreCompileInputs.cache
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto03.Listas\obj\Debug\Projeto03.Listas.exe
+D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto07_Interfaces\Projeto03.Listas\obj\Debug\Projeto03.Listas.pdb
