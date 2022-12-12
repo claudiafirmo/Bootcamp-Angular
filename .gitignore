@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/CSharp/Projeto07_Interfaces/Projeto01.Views/Form1.resx
+/CSharp/Projeto07_Interfaces/Projeto01.Views/Form1.Designer.cs
+/CSharp/Projeto07_Interfaces/Projeto01.Views/Form1.cs
