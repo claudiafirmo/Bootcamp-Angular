@@ -1,10 +1,14 @@
 ﻿using ClassesObjetos.Classes;
+using ClassesObjetos.DTO;
 using ClassesObjetos.Enumeracoes;
+using ClassesObjetos.Estruturas;
+using ClassesObjetos.Interfaces;
 using Dapper;
 using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -43,7 +47,78 @@ namespace ClassesObjetos.Data
                     cargo = funcionario.Cargo,
                     salr = funcionario.Salario
                 });
+                if (!string.IsNullOrEmpty(funcionario.EnderecoInfo.Logradouro))
+                {
+                    Endereco end = funcionario.EnderecoInfo;
+                    cn.Execute("INSERT INTO tb_enderecos (documento, logradouro, numero, cidade, cep)" +
+                        "VALUES (@doc,@log,@num,@cid,@cep)", new
+                        {
+                            doc = funcionario.Documento.Numero,
+                            log = end.Logradouro,
+                            num = end.Numero,
+                            cid = end.Cidade,
+                            cep = end.Cep
+                        });
+                }
+                return registros;
+            }
+        }
+        public IEnumerable<Funcionario> ListarFuncionarios()
+        {
+            using (var cn = new NpgsqlConnection(conexao))
+            {
+                var funcionarios = cn.Query<FuncionarioDTO>("SELECT * FROM tb_funcionarios");
+                List<Funcionario> lista = new List<Funcionario>();
+                foreach(var item in funcionarios)
+                {
+                    IDocumento documento;
+                    if (item.Documento.Trim().Length == 11)
+                    {
+                        documento = new DocumentoCpf(item.Documento.Trim());
+                    }
+                    else
+                    {
+                        documento = new DocumentoCnpj(item.Documento);
+                    }
 
+                    Sexos sexo;
+                    switch (item.Sexo)
+                    {
+                        case "0": sexo = Sexos.Masculino;break;
+                        case "1": sexo = Sexos.Feminino;break;
+                        default: sexo = Sexos.Outros;break;
+                    }
+
+                    Funcionario funcionario = new Funcionario(documento, item.Nome, item.Cargo, item.Salario)
+                    {
+                        Idade = item.Idade,
+                        Sexo = sexo
+                    };
+
+                    Endereco endereco = cn.QueryFirstOrDefault<Endereco>("select logradouro, numero, cidade, cep from tb_enderecos" +
+                        " where documento = @documento",
+                        new { documento = item.Documento.Trim() });
+
+                    if (!string.IsNullOrEmpty(endereco.Logradouro))
+                    {
+                        funcionario.EnderecoInfo = endereco;
+                    }
+
+                    lista.Add(funcionario);
+                }
+                return lista;
+            }
+        }
+        public int RemoverFuncionario(string documento)
+        {
+            using (var cn = new NpgsqlConnection(conexao))
+            {
+                cn.Execute("DELETE FROM tb_enderecos where documento = @documento",
+                    new { documento = documento });
+
+                var registros = cn.Execute(
+                    "DELETE FROM tb_funcionarios where documento = @documento", 
+                    new{ documento = documento });
                 return registros;
             }
         }
