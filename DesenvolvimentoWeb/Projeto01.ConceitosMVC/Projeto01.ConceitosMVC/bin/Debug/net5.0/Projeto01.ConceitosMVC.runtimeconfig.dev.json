@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Pagani Lima\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Pagani Lima\\.nuget\\packages"
+    ]
+  }
+}
