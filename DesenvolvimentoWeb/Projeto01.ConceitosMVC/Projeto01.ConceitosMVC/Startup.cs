@@ -46,7 +46,7 @@ namespace Projeto01.ConceitosMVC
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Exemplos}/{action=ExibirTexto}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

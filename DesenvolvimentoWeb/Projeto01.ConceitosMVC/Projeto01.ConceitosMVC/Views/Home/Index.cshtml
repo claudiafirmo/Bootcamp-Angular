@@ -2,7 +2,12 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div>
+    <h2>Bem vindo ao ASP.NET Core MVC</h2>
+    <h3>Escolha uma opção</h3>
+    <ul>
+        <li>@Html.ActionLink("Exibir Texto Puro", "ExibirTexto", "Exemplos")</li>
+        <li>@Html.ActionLink("Exibir Action Conteudo", "Conteudo", "Exemplos")</li>
+        <li>@Html.ActionLink("Cadastro de produtos", "Cadastro", "Exemplos")</li>
+    </ul>
 </div>

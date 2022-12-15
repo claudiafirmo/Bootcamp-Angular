@@ -360,3 +360,4 @@ D:\DEV MANDA\Bootcamp-Angular\DesenvolvimentoWeb\Projeto01.ConceitosMVC\Projeto0
 D:\DEV MANDA\Bootcamp-Angular\DesenvolvimentoWeb\Projeto01.ConceitosMVC\Projeto01.ConceitosMVC\obj\Debug\net5.0\Projeto01.ConceitosMVC.genruntimeconfig.cache
 D:\DEV MANDA\Bootcamp-Angular\DesenvolvimentoWeb\Projeto01.ConceitosMVC\Projeto01.ConceitosMVC\obj\Debug\net5.0\ref\Projeto01.ConceitosMVC.dll
 D:\DEV MANDA\Bootcamp-Angular\DesenvolvimentoWeb\Projeto01.ConceitosMVC\Projeto01.ConceitosMVC\obj\Debug\net5.0\Razor\Views\Exemplos\Conteudo.cshtml.g.cs
+D:\DEV MANDA\Bootcamp-Angular\DesenvolvimentoWeb\Projeto01.ConceitosMVC\Projeto01.ConceitosMVC\obj\Debug\net5.0\Razor\Views\Exemplos\Cadastro.cshtml.g.cs
