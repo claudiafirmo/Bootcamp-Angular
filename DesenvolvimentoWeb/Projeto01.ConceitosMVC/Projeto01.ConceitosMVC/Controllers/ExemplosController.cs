@@ -37,13 +37,43 @@ namespace Projeto01.ConceitosMVC.Controllers
                     Preco = double.Parse(form["txtPreco"])
                 };
                 return View("Resultado", produto);
-                    
+                //return RedirectToAction("Conteudo"); // Realiza nova requisição
+
             }
             catch (Exception)
             {
 
                 throw;
             }
+        }
+        [HttpGet]
+        public IActionResult CadastroModel()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CadastroModel(Produto p)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            return View("Resultado", p);
+        }
+        [HttpGet]
+        public IActionResult CadastroModelTag() // Utilização de Tag Helper
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult CadastroModelTag(Produto produto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            return View("Resultado", produto);
         }
     }
 }
