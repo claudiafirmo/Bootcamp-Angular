@@ -55,11 +55,13 @@ namespace Projeto01.ConceitosMVC.Controllers
         [HttpPost]
         public IActionResult CadastroModel(Produto p)
         {
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-            return View("Resultado", p);
+            return CadastroModelTag(p);
+
+            //if (!ModelState.IsValid)
+            //{
+            //    return View();
+            //}
+            //return View("Resultado", p);
         }
         [HttpGet]
         public IActionResult CadastroModelTag() // Utilização de Tag Helper
