@@ -415,3 +415,5 @@ D:\DEV MANDA\Bootcamp-Angular\DesenvolvimentoWeb\Projeto01.ConceitosMVC\Projeto0
 D:\DEV MANDA\Bootcamp-Angular\DesenvolvimentoWeb\Projeto01.ConceitosMVC\Projeto01.ConceitosMVC\obj\Debug\net5.0\Razor\Views\Pessoas\Index.cshtml.g.cs
 D:\DEV MANDA\Bootcamp-Angular\DesenvolvimentoWeb\Projeto01.ConceitosMVC\Projeto01.ConceitosMVC\obj\Debug\net5.0\Razor\Views\Pessoas\DadosPessoa.cshtml.g.cs
 D:\DEV MANDA\Bootcamp-Angular\DesenvolvimentoWeb\Projeto01.ConceitosMVC\Projeto01.ConceitosMVC\obj\Debug\net5.0\Razor\Views\Pessoas\ListarPessoas.cshtml.g.cs
+D:\DEV MANDA\Bootcamp-Angular\DesenvolvimentoWeb\Projeto01.ConceitosMVC\Projeto01.ConceitosMVC\obj\Debug\net5.0\Razor\Views\Pessoas\AlterarPessoa.cshtml.g.cs
+D:\DEV MANDA\Bootcamp-Angular\DesenvolvimentoWeb\Projeto01.ConceitosMVC\Projeto01.ConceitosMVC\obj\Debug\net5.0\Razor\Views\Shared\_Erro.cshtml.g.cs

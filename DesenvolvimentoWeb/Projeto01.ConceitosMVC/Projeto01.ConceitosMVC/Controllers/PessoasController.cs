@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Projeto01.ConceitosMVC.Models;
+using System;
+using System.Collections.Generic;
 
 namespace Projeto01.ConceitosMVC.Controllers
 {
@@ -42,6 +44,36 @@ namespace Projeto01.ConceitosMVC.Controllers
         public IActionResult ListarPessoas()
         {
             return View(Utils.ListarPessoas());
+        }
+
+        [HttpGet]
+        public IActionResult AlterarPessoa(string id)
+        {
+            try
+            {
+                if(id == null)
+                {
+                    throw new Exception("Nenhum valor foi informado para o CPF");
+                }
+                List<Pessoa> pessoas = (List<Pessoa>)Utils.ListarPessoas();
+                Pessoa pessoa = pessoas.Find(p => p.Cpf == id);
+                if(pessoa == null)
+                {
+                    throw new Exception("Não foi encontrado nenhuma pessoa com o CPF informado");
+                }
+                
+                string tipo;
+                if(pessoa is Cliente) { tipo = "Cliente"; } 
+                else if(pessoa is Fornecedor){ tipo = "Fornecedor"; }
+                else{ tipo = "Pessoa"; }
+
+                ViewData["tipo"] = tipo;
+                return View(pessoa);
+            }
+            catch (Exception e)
+            {
+                return View("_Erro", e);
+            }
         }
     }
 }
