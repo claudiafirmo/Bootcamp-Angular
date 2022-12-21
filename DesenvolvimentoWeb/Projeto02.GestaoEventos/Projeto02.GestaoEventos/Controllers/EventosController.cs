@@ -24,8 +24,74 @@ namespace Projeto02.GestaoEventos.Controllers
         [HttpPost]
         public IActionResult CadastroEvento(Evento evento)
         {
-            Db.IncluirEvento(evento);
-            return RedirectToAction("ListarTodos");
+            try
+            {
+                DateTime.SpecifyKind(evento.data, DateTimeKind.Utc);
+                Db.IncluirEvento(evento);
+                //return RedirectToAction("ListarTodos");
+                //return View();
+                return RedirectToAction("CadastroEvento");
+            }
+            catch (Exception e)
+            {
+
+                return View("_Erro", e);
+            }
+        }
+        private IActionResult ProcessarEvento(int id, string view)
+        {
+            try
+            {
+                Evento evento = Db.BuscarEvento(id);
+                if(evento == null)
+                {
+                    throw new ArgumentException("Evento inexistente");
+                }
+                return View(view, evento);
+            }
+            catch (Exception e)
+            {
+
+                return View("_Erro", e);
+            }
+        } 
+        [HttpGet]
+        public IActionResult RemoverEvento(int id)
+        {
+           return ProcessarEvento(id, "RemoverEvento");
+        }
+        [HttpPost]
+        public IActionResult RemoverEvento(Evento evento)
+        {
+            try
+            {
+                Db.RemoverEvento(evento);
+                return RedirectToAction("ListarTodos");
+            }
+            catch (Exception e)
+            {
+
+                return View("_Erro", e);
+            }
+        }
+        [HttpGet]
+        public IActionResult AlterarEvento(int id)
+        {
+           return ProcessarEvento(id, "AlterarEvento");
+        }
+        [HttpPost]
+        public IActionResult AlterarEvento(Evento evento)
+        {
+            try
+            {
+                Db.AlterarEvento(evento);
+                return RedirectToAction("ListarTodos");
+            }
+            catch (Exception e)
+            {
+
+                return View("_Erro", e);
+            }
         }
     }
 }

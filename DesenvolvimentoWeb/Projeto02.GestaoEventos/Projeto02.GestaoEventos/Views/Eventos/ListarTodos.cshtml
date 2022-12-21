@@ -13,19 +13,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Id)
+                @Html.DisplayNameFor(model => model.id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Descricao)
+                @Html.DisplayNameFor(model => model.descricao)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Responsavel)
+                @Html.DisplayNameFor(model => model.responsavel)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Preco)
+                @Html.DisplayNameFor(model => model.preco)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Data)
+                @Html.DisplayNameFor(model => model.data)
             </th>
             <th></th>
         </tr>
@@ -34,24 +34,23 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
+                @Html.DisplayFor(modelItem => item.id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
+                @Html.DisplayFor(modelItem => item.descricao)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Responsavel)
+                @Html.DisplayFor(modelItem => item.responsavel)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => $"{item.Preco:c2}")
+                @Html.DisplayFor(modelItem => item.preco)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Data)
+                @Html.DisplayFor(modelItem => item.data)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Alterar", "AlterarEvento", new { id=item.id}) |
+                @Html.ActionLink("Excluir", "RemoverEvento", new { id=item.id})
             </td>
         </tr>
 }

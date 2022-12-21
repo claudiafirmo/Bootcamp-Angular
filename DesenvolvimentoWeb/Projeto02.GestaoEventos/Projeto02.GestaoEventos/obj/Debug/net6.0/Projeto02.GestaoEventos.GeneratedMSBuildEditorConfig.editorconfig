@@ -16,6 +16,34 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\DEV MANDA\Bootcamp-Angular\DesenvolvimentoWeb\Projeto02.GestaoEventos\Projeto02.GestaoEventos
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/DEV MANDA/Bootcamp-Angular/DesenvolvimentoWeb/Projeto02.GestaoEventos/Projeto02.GestaoEventos/Views/Convidados/AdicionarConvidado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udmlkYWRvc1xBZGljaW9uYXJDb252aWRhZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV MANDA/Bootcamp-Angular/DesenvolvimentoWeb/Projeto02.GestaoEventos/Projeto02.GestaoEventos/Views/Convidados/DetalhesConvidado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udmlkYWRvc1xEZXRhbGhlc0NvbnZpZGFkby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV MANDA/Bootcamp-Angular/DesenvolvimentoWeb/Projeto02.GestaoEventos/Projeto02.GestaoEventos/Views/Convidados/EditarConvidado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udmlkYWRvc1xFZGl0YXJDb252aWRhZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV MANDA/Bootcamp-Angular/DesenvolvimentoWeb/Projeto02.GestaoEventos/Projeto02.GestaoEventos/Views/Convidados/ExcluirConvidado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udmlkYWRvc1xFeGNsdWlyQ29udmlkYWRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV MANDA/Bootcamp-Angular/DesenvolvimentoWeb/Projeto02.GestaoEventos/Projeto02.GestaoEventos/Views/Convidados/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udmlkYWRvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV MANDA/Bootcamp-Angular/DesenvolvimentoWeb/Projeto02.GestaoEventos/Projeto02.GestaoEventos/Views/Convidados/ListarTodos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udmlkYWRvc1xMaXN0YXJUb2Rvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV MANDA/Bootcamp-Angular/DesenvolvimentoWeb/Projeto02.GestaoEventos/Projeto02.GestaoEventos/Views/Eventos/AlterarEvento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xBbHRlcmFyRXZlbnRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DEV MANDA/Bootcamp-Angular/DesenvolvimentoWeb/Projeto02.GestaoEventos/Projeto02.GestaoEventos/Views/Eventos/CadastroEvento.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xDYWRhc3Ryb0V2ZW50by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xMaXN0YXJUb2Rvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DEV MANDA/Bootcamp-Angular/DesenvolvimentoWeb/Projeto02.GestaoEventos/Projeto02.GestaoEventos/Views/Eventos/RemoverEvento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvc1xSZW1vdmVyRXZlbnRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DEV MANDA/Bootcamp-Angular/DesenvolvimentoWeb/Projeto02.GestaoEventos/Projeto02.GestaoEventos/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DEV MANDA/Bootcamp-Angular/DesenvolvimentoWeb/Projeto02.GestaoEventos/Projeto02.GestaoEventos/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV MANDA/Bootcamp-Angular/DesenvolvimentoWeb/Projeto02.GestaoEventos/Projeto02.GestaoEventos/Views/Shared/_Erro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FcnJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DEV MANDA/Bootcamp-Angular/DesenvolvimentoWeb/Projeto02.GestaoEventos/Projeto02.GestaoEventos/Views/Shared/_ValidationScriptsPartial.cshtml]
