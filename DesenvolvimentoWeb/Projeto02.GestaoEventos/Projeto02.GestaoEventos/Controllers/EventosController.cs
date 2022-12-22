@@ -6,6 +6,14 @@ namespace Projeto02.GestaoEventos.Controllers
 {
     public class EventosController : Controller
     {
+        EventosDao dao;
+        public EventosController()
+        {
+            if(dao == null)
+            {
+                dao = new EventosDao();
+            }
+        }
         public IActionResult Index()
         {
             return View();
@@ -13,7 +21,7 @@ namespace Projeto02.GestaoEventos.Controllers
         [HttpGet]
         public IActionResult ListarTodos()
         {
-            return View(Db.ListarEventos());
+            return View(dao.ListarTodos());
         }
         [HttpGet]
         public IActionResult CadastroEvento()
@@ -27,7 +35,7 @@ namespace Projeto02.GestaoEventos.Controllers
             try
             {
                 DateTime.SpecifyKind(evento.data, DateTimeKind.Utc);
-                Db.IncluirEvento(evento);
+                dao.Incluir(evento);
                 //return RedirectToAction("ListarTodos");
                 //return View();
                 return RedirectToAction("CadastroEvento");
@@ -42,7 +50,7 @@ namespace Projeto02.GestaoEventos.Controllers
         {
             try
             {
-                Evento evento = Db.BuscarEvento(id);
+                Evento evento = dao.Buscar(id);
                 if(evento == null)
                 {
                     throw new ArgumentException("Evento inexistente");
@@ -65,7 +73,7 @@ namespace Projeto02.GestaoEventos.Controllers
         {
             try
             {
-                Db.RemoverEvento(evento);
+                dao.Remover(evento);
                 return RedirectToAction("ListarTodos");
             }
             catch (Exception e)
@@ -84,7 +92,7 @@ namespace Projeto02.GestaoEventos.Controllers
         {
             try
             {
-                Db.AlterarEvento(evento);
+                dao.Alterar(evento);
                 return RedirectToAction("ListarTodos");
             }
             catch (Exception e)

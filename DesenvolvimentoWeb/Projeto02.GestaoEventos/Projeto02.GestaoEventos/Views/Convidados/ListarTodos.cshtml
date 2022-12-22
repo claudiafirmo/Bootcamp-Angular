@@ -7,7 +7,7 @@
 <h1>Listagem de convidados</h1>
 
 <p>
-    <a asp-action="AdicionarConvidado">Incluir novo convidado</a>
+    @Html.ActionLink("Incluir novo convidado", "AdicionarConvidado", "Convidados", null, new { @class="btn btn-primary"})
 </p>
 <table class="table">
     <thead>

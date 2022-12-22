@@ -10,33 +10,33 @@
     <div class="col-md-4">
         <form asp-action="AlterarEvento">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            <div class="mb-3">
                 <input type="hidden" asp-for="id" />
                 @*<label asp-for="id" class="control-label"></label>
                 <input asp-for="id" class="form-control" />
                 <span asp-validation-for="id" class="text-danger"></span>*@
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label asp-for="descricao" class="control-label"></label>
                 <input asp-for="descricao" class="form-control" />
                 <span asp-validation-for="descricao" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label asp-for="responsavel" class="control-label"></label>
                 <input asp-for="responsavel" class="form-control" />
                 <span asp-validation-for="responsavel" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label asp-for="preco" class="control-label"></label>
                 <input asp-for="preco" class="form-control" />
                 <span asp-validation-for="preco" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label asp-for="data" class="control-label"></label>
                 <input asp-for="data" class="form-control" />
                 <span asp-validation-for="data" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <input type="submit" value="Alterar evento" class="btn btn-primary" />
             </div>
         </form>

@@ -6,6 +6,15 @@ namespace Projeto02.GestaoEventos.Controllers
 {
     public class ConvidadosController : Controller
     {
+        ConvidadosDao dao;
+        public ConvidadosController()
+        {
+            if(dao == null)
+            {
+                dao = new ConvidadosDao();
+            }
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -13,7 +22,7 @@ namespace Projeto02.GestaoEventos.Controllers
         [HttpGet]
         public IActionResult ListarTodos()
         {
-            return View(DbConvidados.ListarConvidados());
+            return View(dao.ListarTodos());
         }
         [HttpGet]
         public IActionResult AdicionarConvidado()
@@ -25,7 +34,7 @@ namespace Projeto02.GestaoEventos.Controllers
         {
             try
             {
-                DbConvidados.IncluirConvidado(convidado);
+                dao.Incluir(convidado);
                 return RedirectToAction("ListarTodos"); 
                 
             }
@@ -37,7 +46,7 @@ namespace Projeto02.GestaoEventos.Controllers
         }
         private IActionResult ProcessarConvidado(int id, string nomeView)
         {
-            return View(nomeView, DbConvidados.BuscarConvidado(id));
+            return View(nomeView, dao.Buscar(id));
         }
         [HttpGet]
         public IActionResult EditarConvidado(int id)
@@ -50,7 +59,7 @@ namespace Projeto02.GestaoEventos.Controllers
         {
             try
             {
-                DbConvidados.UpdateConvidado(convidado);
+                dao.Alterar(convidado);
                 return RedirectToAction("ListarTodos");
             }
             catch (Exception e)
@@ -62,7 +71,7 @@ namespace Projeto02.GestaoEventos.Controllers
         [HttpGet]
         public IActionResult DetalhesConvidado(int id)
         {
-            return View(DbConvidados.BuscarConvidado(id));
+            return View(dao.Buscar(id));
         }
         [HttpGet]
         public IActionResult ExcluirConvidado(int id)
@@ -72,7 +81,7 @@ namespace Projeto02.GestaoEventos.Controllers
         [HttpPost]
         public IActionResult ExcluirConvidado(Convidado convidado)
         {
-            DbConvidados.DeletarConvidado(convidado);
+            dao.Remover(convidado);
             return RedirectToAction("ListarTodos");
         }
     }

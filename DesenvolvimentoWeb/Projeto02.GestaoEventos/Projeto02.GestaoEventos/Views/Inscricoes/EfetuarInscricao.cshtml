@@ -1,0 +1,39 @@
+﻿@model Projeto02.GestaoEventos.Models.Inscricao
+
+@{
+    ViewData["Title"] = "EfetuarInscricao";
+}
+
+<h1>Efetuar Inscrição</h1>
+
+<h4>Selecione um evento e um convidado:</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EfetuarInscricao">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="mb-3">
+                <label asp-for="IdEvento" class="control-label"></label>
+
+                <select asp-for="IdEvento" 
+                        asp-items="(SelectList)ViewBag.ListaEventos" class="form-select">
+                </select>
+                <span asp-validation-for="IdEvento" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="IdConvidado" class="control-label"></label>
+                <select asp-for="IdConvidado" asp-items="(SelectList)ViewBag.ListaConvidados" class="form-select">
+                </select>
+                <span asp-validation-for="IdConvidado" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Efetuar inscrição" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
