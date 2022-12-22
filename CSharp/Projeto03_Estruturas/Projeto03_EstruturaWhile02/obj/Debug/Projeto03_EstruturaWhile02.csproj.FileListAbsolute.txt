@@ -1,8 +1,0 @@
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile02\bin\Debug\Projeto03_EstruturaWhile02.exe.config
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile02\bin\Debug\Projeto03_EstruturaWhile02.exe
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile02\bin\Debug\Projeto03_EstruturaWhile02.pdb
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile02\obj\Debug\Projeto03_EstruturaWhile02.csproj.AssemblyReference.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile02\obj\Debug\Projeto03_EstruturaWhile02.csproj.SuggestedBindingRedirects.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile02\obj\Debug\Projeto03_EstruturaWhile02.csproj.CoreCompileInputs.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile02\obj\Debug\Projeto03_EstruturaWhile02.exe
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_EstruturaWhile02\obj\Debug\Projeto03_EstruturaWhile02.pdb

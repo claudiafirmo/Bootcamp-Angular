@@ -1,8 +1,0 @@
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto01_ArraysNumericos\bin\Debug\Projeto01_ArraysNumericos.exe.config
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto01_ArraysNumericos\bin\Debug\Projeto01_ArraysNumericos.exe
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto01_ArraysNumericos\bin\Debug\Projeto01_ArraysNumericos.pdb
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto01_ArraysNumericos\obj\Debug\Projeto01_ArraysNumericos.csproj.AssemblyReference.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto01_ArraysNumericos\obj\Debug\Projeto01_ArraysNumericos.csproj.SuggestedBindingRedirects.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto01_ArraysNumericos\obj\Debug\Projeto01_ArraysNumericos.csproj.CoreCompileInputs.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto01_ArraysNumericos\obj\Debug\Projeto01_ArraysNumericos.exe
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto01_ArraysNumericos\obj\Debug\Projeto01_ArraysNumericos.pdb

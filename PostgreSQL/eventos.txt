@@ -1,2 +1,0 @@
-﻿10;Palestra sobre MVC;Paulo Sergio;1000;2022-11-18
-20;Festa de Halloween;Jojo Todinho;500;2022-10-31

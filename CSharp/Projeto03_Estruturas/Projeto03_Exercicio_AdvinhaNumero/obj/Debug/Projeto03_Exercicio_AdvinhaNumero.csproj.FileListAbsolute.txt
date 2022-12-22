@@ -1,8 +1,0 @@
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_Exercicio_AdvinhaNumero\bin\Debug\Projeto03_Exercicio_AdvinhaNumero.exe.config
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_Exercicio_AdvinhaNumero\bin\Debug\Projeto03_Exercicio_AdvinhaNumero.exe
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_Exercicio_AdvinhaNumero\bin\Debug\Projeto03_Exercicio_AdvinhaNumero.pdb
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_Exercicio_AdvinhaNumero\obj\Debug\Projeto03_Exercicio_AdvinhaNumero.csproj.AssemblyReference.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_Exercicio_AdvinhaNumero\obj\Debug\Projeto03_Exercicio_AdvinhaNumero.csproj.SuggestedBindingRedirects.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_Exercicio_AdvinhaNumero\obj\Debug\Projeto03_Exercicio_AdvinhaNumero.csproj.CoreCompileInputs.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_Exercicio_AdvinhaNumero\obj\Debug\Projeto03_Exercicio_AdvinhaNumero.exe
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeto03_Exercicio_AdvinhaNumero\obj\Debug\Projeto03_Exercicio_AdvinhaNumero.pdb

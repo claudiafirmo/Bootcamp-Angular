@@ -1,8 +1,0 @@
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto05_POO\Projeto01_ClassesObjetos\bin\Debug\Projeto01_ClassesObjetos.exe.config
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto05_POO\Projeto01_ClassesObjetos\bin\Debug\Projeto01_ClassesObjetos.exe
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto05_POO\Projeto01_ClassesObjetos\bin\Debug\Projeto01_ClassesObjetos.pdb
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto05_POO\Projeto01_ClassesObjetos\obj\Debug\Projeto01_ClassesObjetos.csproj.AssemblyReference.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto05_POO\Projeto01_ClassesObjetos\obj\Debug\Projeto01_ClassesObjetos.csproj.SuggestedBindingRedirects.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto05_POO\Projeto01_ClassesObjetos\obj\Debug\Projeto01_ClassesObjetos.csproj.CoreCompileInputs.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto05_POO\Projeto01_ClassesObjetos\obj\Debug\Projeto01_ClassesObjetos.exe
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto05_POO\Projeto01_ClassesObjetos\obj\Debug\Projeto01_ClassesObjetos.pdb

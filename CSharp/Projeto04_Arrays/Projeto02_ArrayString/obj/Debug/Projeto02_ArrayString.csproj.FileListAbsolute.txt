@@ -1,8 +1,0 @@
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto02_ArrayString\bin\Debug\Projeto02_ArrayString.exe.config
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto02_ArrayString\bin\Debug\Projeto02_ArrayString.exe
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto02_ArrayString\bin\Debug\Projeto02_ArrayString.pdb
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto02_ArrayString\obj\Debug\Projeto02_ArrayString.csproj.AssemblyReference.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto02_ArrayString\obj\Debug\Projeto02_ArrayString.csproj.SuggestedBindingRedirects.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto02_ArrayString\obj\Debug\Projeto02_ArrayString.csproj.CoreCompileInputs.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto02_ArrayString\obj\Debug\Projeto02_ArrayString.exe
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto04_Arrays\Projeto02_ArrayString\obj\Debug\Projeto02_ArrayString.pdb

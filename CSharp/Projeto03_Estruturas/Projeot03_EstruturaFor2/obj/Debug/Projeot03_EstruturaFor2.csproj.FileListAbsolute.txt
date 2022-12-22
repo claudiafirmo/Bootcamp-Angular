@@ -1,8 +1,0 @@
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeot03_EstruturaFor2\bin\Debug\Projeot03_EstruturaFor2.exe.config
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeot03_EstruturaFor2\bin\Debug\Projeot03_EstruturaFor2.exe
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeot03_EstruturaFor2\bin\Debug\Projeot03_EstruturaFor2.pdb
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeot03_EstruturaFor2\obj\Debug\Projeot03_EstruturaFor2.csproj.AssemblyReference.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeot03_EstruturaFor2\obj\Debug\Projeot03_EstruturaFor2.csproj.SuggestedBindingRedirects.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeot03_EstruturaFor2\obj\Debug\Projeot03_EstruturaFor2.csproj.CoreCompileInputs.cache
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeot03_EstruturaFor2\obj\Debug\Projeot03_EstruturaFor2.exe
-D:\DEV MANDA\Bootcamp-Angular\CSharp\Projeto03_Estruturas\Projeot03_EstruturaFor2\obj\Debug\Projeot03_EstruturaFor2.pdb
