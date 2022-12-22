@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Este exercicio possiu apenas código Javascript, e deve ser visualizado no console</h1>
+    <button id="btn">Executar código</button>
+    <script>
+        document.getElementById('btn').addEventListener('click', function(){
+            let listaNomes = ['Amanda', 'Taty', 'Letícia', 'Claudia', 'Ingrid', 'Larissa', 'Giovanna']
+            // começam com L
+            let nomesL = listaNomes.filter(n => n.startsWith('L'));
+    
+            // contenham letra A
+            let nomesCom_A = listaNomes.filter(n => n.includes('a'))
+    
+            console.log(nomesL);
+            console.log(nomesCom_A);
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            display: inline-block;
+            text-align: center;
+        }
+    </style>
+    <script>
+
+        function acao(){
+            alert('AIN QUE DELICIAH')
+        }
+
+        function acao2(){
+            alert('AH HAIIIN')
+        }
+
+    </script>
+</head>
+<body>
+    <div class="block" onclick="acao()" style="background: red; height: 150px; width: 150px;">onclick</div>
+    <div class="block" ondblclick="acao()" style="background: gray; height: 150px; width: 150px;">ondblclick</div>
+    <div class="block" onmouseup="acao()" style="background: blue; height: 150px; width: 150px;">onmouseup</div>
+    <div class="block" onmouseover="acao()" style="background: green; height: 150px; width: 150px;">onmouseover</div>
+    <div class="block" onmouseout="acao()" style="background: purple; height: 150px; width: 150px;">onmouseout</div>
+    <div class="block" onclick="acao()" onmouseout="acao2()" style="background: black;color: white; height: 150px; width: 150px;">onmouseout e onclick</div>
+</body>
+</html>

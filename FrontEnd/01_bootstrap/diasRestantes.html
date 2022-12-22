@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+    <title>Dias Restantes</title>
+</head>
+<body>
+    <div class="container margem">
+        <h1>Cálculo de dias restantes</h1>
+        <div>
+            <div class="mb-3">
+                <label class="form-label">Informe o dia:</label>
+                <input type="number" class="form-control" id="dia">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Informe o mês:</label>
+                <input type="number" class="form-control" id="mes">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Informe o ano:</label>
+                <input type="number" class="form-control" id="ano">
+            </div>
+            <button type="button" class="btn btn-primary" id="btnCalcular" >Calcular</button>
+            <div id="resposta"></div>
+        </div>
+    </div>
+    <script src="js/diasRestantes.js"></script> <!--Primeiro carrega a função, dps oq usa a função-->
+    <script src="js/eventoDias.js"></script>
+</body>
+</html>

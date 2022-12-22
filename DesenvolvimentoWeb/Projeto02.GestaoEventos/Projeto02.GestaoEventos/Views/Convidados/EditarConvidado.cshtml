@@ -1,0 +1,39 @@
+﻿@model Projeto02.GestaoEventos.Models.Convidado
+
+@{
+    ViewData["Title"] = "EditarConvidado";
+}
+
+<h1>Editar convidado</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditarConvidado">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="mb-3">
+                <label asp-for="cpf" class="control-label"></label>
+                <input asp-for="cpf" class="form-control" />
+                <span asp-validation-for="cpf" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="nome" class="control-label"></label>
+                <input asp-for="nome" class="form-control" />
+                <span asp-validation-for="nome" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="mb-3">
+                <input type="submit" value="Editar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ListarTodos">Voltar para a lista</a>
+</div>
+

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apostila", "CSharp\Apostila.csproj", "{6F5C27C4-CEEA-420B-ADCD-F8E9612D4556}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassesAbstratasVSInterfaces", "ClassesAbstratasVSInterfaces\ClassesAbstratasVSInterfaces.csproj", "{3130DC5B-0D0D-462A-B435-A58C7E2D0101}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F5C27C4-CEEA-420B-ADCD-F8E9612D4556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F5C27C4-CEEA-420B-ADCD-F8E9612D4556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F5C27C4-CEEA-420B-ADCD-F8E9612D4556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F5C27C4-CEEA-420B-ADCD-F8E9612D4556}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3130DC5B-0D0D-462A-B435-A58C7E2D0101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3130DC5B-0D0D-462A-B435-A58C7E2D0101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3130DC5B-0D0D-462A-B435-A58C7E2D0101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3130DC5B-0D0D-462A-B435-A58C7E2D0101}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E562B0F-C441-4316-A1DB-3E6636F0839A}
+	EndGlobalSection
+EndGlobal

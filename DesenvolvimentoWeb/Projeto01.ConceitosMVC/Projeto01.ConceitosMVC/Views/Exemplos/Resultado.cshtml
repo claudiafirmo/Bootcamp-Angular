@@ -1,0 +1,10 @@
+﻿@model Projeto01.ConceitosMVC.Models.Produto
+@*ou @model Produto*@
+<div class="margem">
+    @Html.ActionLink("Voltar ao Cadastro", "CadastroModel", "Exemplos")
+    <br /><a asp-action="Index" asp-controller="Home">Voltar a página inicial</a>
+    <h1>Dados recebidos da pessoa:</h1>
+    <span>Código: @Model.Codigo</span><br>
+    <span>Descrição: @Model.Descricao</span><br>
+    <span>Preço: @Model.Preco.ToString("c")</span><br>
+</div>

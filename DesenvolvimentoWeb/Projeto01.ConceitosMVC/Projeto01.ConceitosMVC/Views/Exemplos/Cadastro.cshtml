@@ -1,0 +1,20 @@
+﻿<h2>Cadastro de produtos</h2>
+
+@using(Html.BeginForm())
+{
+<div class="margem">
+    <div class="mb-3">
+        @Html.Label("codigo", "Código", new { @class="form-label" })
+        @Html.TextBox("txtCodigo", null , new { @class="form-control"})
+    </div>
+    <div class="mb-3">
+        @Html.Label("descricao", "Descrição", new { @class="form-label" })
+        @Html.TextBox("txtDescricao", null , new { @class="form-control"})
+    </div>
+    <div class="mb-3">
+        @Html.Label("preco", "Preço", new { @class="form-label" })
+        @Html.TextBox("txtPreco", null, new { @class="form-control"})
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</Button>
+</div>
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcula Media</title>
+    <script>
+      function calcularMedia() {
+        n1 = parseFloat(document.getElementById("nota1").value);
+        console.log(  n1);
+        n2 = parseFloat(document.getElementById("nota2").value);
+        n3 = parseFloat(document.getElementById("nota3").value);
+        n4 = parseFloat(document.getElementById("nota4").value);
+        media = (n1 + n2 + n3 + n4) / 4;
+        console.log(media);
+        if (media >= 7.0) {
+          document.write("Status: Aprovado");
+        } else {
+          document.write("Status: Reprovado");
+        }
+        document.write("<br><a href='desafio2.html'>Voltar</a>");
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="nota1"
+      placeholder="Informe a primeira nota"
+    /><br /><br />
+    <input
+      type="text"
+      id="nota2"
+      placeholder="Informe a segunda nota"
+    /><br /><br />
+    <input
+      type="text"
+      id="nota3"
+      placeholder="Informe a terceira nota"
+    /><br /><br />
+    <input
+      type="text"
+      id="nota4"
+      placeholder="Informe a quarta nota"
+    /><br /><br />
+    <button type="button" onclick="calcularMedia()">Calcular</button>
+  </body>
+</html>
