@@ -17,12 +17,14 @@
 
                 <select asp-for="IdEvento" 
                         asp-items="(SelectList)ViewBag.ListaEventos" class="form-select">
+                        <option value="0">SELECIONE UM EVENTO</option>
                 </select>
                 <span asp-validation-for="IdEvento" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label asp-for="IdConvidado" class="control-label"></label>
                 <select asp-for="IdConvidado" asp-items="(SelectList)ViewBag.ListaConvidados" class="form-select">
+                    <option value="0">SELECIONE UM CONVIDADO</option>
                 </select>
                 <span asp-validation-for="IdConvidado" class="text-danger"></span>
             </div>
