@@ -1,0 +1,32 @@
+﻿@model Projeto02.GestaoEventos.ViewModel.EventosConvidadosVM
+
+@{
+    ViewData["Title"] = "ExcluirInscricao";
+}
+
+<h1>Excluir Inscrição</h1>
+
+<h3>Você deseja excluir essa inscrição?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Evento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Evento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Convidado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Convidado)
+        </dd>
+    </dl>
+    
+    <form asp-action="ExcluirInscricao">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-action="ListarEventos">Não, desejo voltar para a lista</a>
+    </form>
+</div>

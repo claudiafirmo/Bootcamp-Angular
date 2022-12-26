@@ -1,26 +1,26 @@
 ﻿@model IEnumerable<Projeto02.GestaoEventos.ViewModel.EventosConvidadosVM>
 
 @{
-    ViewData["Title"] = "ListarConvidados";
+    ViewData["Title"] = "ListarEventos";
 }
 
-<h1>Listar Convidados por Evento</h1>
+<h1>Listar Eventos por Convidado</h1>
 
 <p>
-    <a asp-action="EfetuarInscricao" class="btn btn-secondary">Efetuar nova inscrição</a>
+    <a asp-action="EfetuarInscricao" class="btn btn-secondary">Inscrever novo convidado</a>
 </p>
-<p>
-    @using (Html.BeginForm("ListarConvidados", "Inscricoes", FormMethod.Get))
-    {
-        <div class="mb-3">
-            @Html.Label("evento", "Escolha o evento")
-            @Html.DropDownList("codigoEvento", (SelectList)ViewBag.ListaEventos, "TODOS", new{ @class="form-select" })
-        </div>
-        <div class="mb-3">
-            <input type="submit" value="Buscar" class="btn btn-primary"/>
-        </div>
-    }
-</p>
+<div class="mb-3">
+        @using(Html.BeginForm("ListarEventos", "Inscricoes", FormMethod.Get))
+        {
+            <div class="mb-3">
+                @Html.Label("convidado", "Selecione um convidado")
+                @Html.DropDownList("codigoConvidado", (SelectList)ViewBag.ListaConvidados, "TODOS", new { @class = "form-select" })
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+        }
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -61,9 +61,7 @@
                 @Html.DisplayFor(modelItem => item.DataInscricao)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    @Html.ActionLink("Excluir inscrição", "ExcluirInscricao", new {  id=item.Id  })
             </td>
         </tr>
 }
