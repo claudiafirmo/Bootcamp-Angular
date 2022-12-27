@@ -108,5 +108,22 @@ namespace Projeto02.GestaoEventos.Controllers
                 return View("_Erro", ex);
             }
         }
+
+        // Com o JAVASCRIPT
+        public IActionResult RemoverInscricao(int id)
+        {
+            try
+            {
+                if (!inscricoesDao.RemoverInscricao(id))
+                {
+                    throw new Exception("Nenhum registro foi removido.");
+                }
+                return RedirectToAction("ListarConvidados");
+            }
+            catch (Exception ex)
+            {
+                return View("_Erro", ex);
+            }
+        }
     }
 }

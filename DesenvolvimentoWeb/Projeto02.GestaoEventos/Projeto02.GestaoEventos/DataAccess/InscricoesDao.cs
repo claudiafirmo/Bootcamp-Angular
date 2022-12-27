@@ -2,6 +2,8 @@
 using Dapper.Contrib.Extensions;
 using Projeto02.GestaoEventos.Models;
 using Projeto02.GestaoEventos.ViewModel;
+using System.Reflection;
+using System.Text;
 
 namespace Projeto02.GestaoEventos.DataAccess
 {
@@ -30,19 +32,21 @@ namespace Projeto02.GestaoEventos.DataAccess
         }
         public IEnumerable<EventosConvidadosVM> ListarConvidados(int idEvento)
        {
+            StringBuilder sb = new StringBuilder();
             try
             {
                 AbrirConexao();
-                string sql = "SELECT i.id as \"Id\", e.descricao as \"Evento\", e.data as \"DataEvento\", c.nome as \"Convidado\", i.datainscricao as \"DataInscricao\"" +
-                    " FROM administracao.tb_inscricoes i INNER JOIN administracao.tb_eventos e on e.id = i.idevento" +
-                    " INNER JOIN administracao.tb_convidados c on i.idconvidado = c.id";
+                sb.Append("SELECT i.id as \"Id\", e.descricao as \"Evento\", e.data as \"DataEvento\", ")
+                    .Append("c.nome as \"Convidado\", i.datainscricao as \"DataInscricao\"")
+                    .Append(" FROM administracao.tb_inscricoes i INNER JOIN administracao.tb_eventos e on e.id = i.idevento")
+                    .Append(" INNER JOIN administracao.tb_convidados c on i.idconvidado = c.id");
 
                 if(idEvento == 0)
                 {
-                    return Conn.Query<EventosConvidadosVM>(sql);
+                    return Conn.Query<EventosConvidadosVM>(sb.ToString());
                 }
-                sql += " WHERE e.id = @idEvento";
-                return Conn.Query<EventosConvidadosVM>(sql, new{ idEvento });
+                sb.Append(" WHERE e.id = @idEvento");
+                return Conn.Query<EventosConvidadosVM>(sb.ToString(), new{ idEvento });
             }
             finally
             {
@@ -93,6 +97,20 @@ namespace Projeto02.GestaoEventos.DataAccess
                 AbrirConexao();
                 string sql = "DELETE FROM administracao.tb_inscricoes WHERE id = @id";
                 return Conn.Execute(sql, new { id = inscricao.Id });
+            }
+            finally
+            {
+                FecharConexao();
+            }
+        }
+        public bool RemoverInscricao(int id)
+        {
+            try
+            {
+                AbrirConexao();
+                int registros = Conn.Execute("DELETE FROM administracao.tb_inscricoes WHERE id = @id", new { id });
+                
+                return registros > 0;
             }
             finally
             {

@@ -2,6 +2,17 @@
     ViewData["Title"] = "Home Page";
 }
 
+@section Scripts
+{
+    <script>
+        function exibir() {
+            $(document).ready(function () {
+                alert("Função disponível apenas para a view Index, controler Home");
+            });
+        }
+    </script>
+}
+
 <h1>Bem vindo ao sistema de gerenciamento de eventos e convidados</h1>
 <h3>Selecione uma tarefa:</h3>
 <ul>
