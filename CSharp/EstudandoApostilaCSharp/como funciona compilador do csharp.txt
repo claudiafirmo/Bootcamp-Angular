@@ -1,0 +1,6 @@
+O código C# após o Build é compilado em IL (linguagem intermediária) e é gerado um assembly (.exe ou .dll). Ao ser executado, o assembly é carregado no CLR (common language runtime) que por sua vez executará a compilação Just in time para converter IL para código de máquina.
+
+CLR tem outros serviços:
+ - Garbage Collector : coletor de lixo, desaloca objetos inutilizados
+ - Exception Handler : Recebe e executa as excessões
+ - Resorces Manager : Gerenciador de recursos
