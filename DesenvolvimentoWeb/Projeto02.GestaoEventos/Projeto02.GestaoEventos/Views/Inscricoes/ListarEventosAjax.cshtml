@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Listar Eventos - Ajax";
+}
+
+<h1>Listar Eventos por Convidado - Ajax</h1>
+
+<form asp-action="ListarEventosAjax" asp-controller="Inscricoes" method="get">
+    <div class="mb-3">
+        <label class="form-label">Selectione um convidado</label>
+        <select class="form-select" asp-items="(SelectList)ViewBag.ListaConvidados" name="idConvidado" id="idConvidado">
+            <option value="0">Selecione</option>
+        </select>
+    </div>
+</form>
+<div class="mb-3" id="resultado"></div>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function(){
+            $("#idConvidado").change(function(){
+                let id = $(this).val();
+                if(id == 0){
+                    let erro = '<div class="alert alert-danger">Nenhum convidado foi selecionado</div>'
+                    $("#resultado").html(erro)
+                } else {
+                    $("#resultado").load("/Inscricoes/ListarEventosAjax?idConvidado=" + id);
+                }
+            });
+        });
+    </script>
+}

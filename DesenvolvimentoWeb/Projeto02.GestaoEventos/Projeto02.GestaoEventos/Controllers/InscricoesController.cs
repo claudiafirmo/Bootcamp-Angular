@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Razor.Language.Extensions;
-using Microsoft.Win32;
 using Projeto02.GestaoEventos.DataAccess;
 using Projeto02.GestaoEventos.Models;
 using Projeto02.GestaoEventos.ViewModel;
@@ -118,7 +116,45 @@ namespace Projeto02.GestaoEventos.Controllers
                 {
                     throw new Exception("Nenhum registro foi removido.");
                 }
-                return RedirectToAction("ListarConvidados");
+                // obtendo a última URL visitada
+                          //  Coleção     referenciador
+                var url = Request.Headers["Referer"].ToString();
+                return Redirect(url);
+                //return RedirectToAction("ListarConvidados");
+            }
+            catch (Exception ex)
+            {
+                return View("_Erro", ex);
+            }
+        }
+        // usando recursos do AJAX e PARTIAL VIEW
+        public IActionResult ListarConvidadosAjax(int idEvento)
+        {
+            ViewBag.ListaEventos = new SelectList(eventosDao.ListarTodos(), "id", "descricao");
+            if(idEvento == 0)
+            {
+                return View();
+            }
+            else
+            {
+                // chamamos a Partial View
+                var lista = inscricoesDao.ListarConvidados(idEvento);
+                return PartialView("_ListaConvidados", lista);
+            }
+
+        }
+
+        public IActionResult ListarEventosAjax(int idConvidado)
+        {
+            try
+            {
+                ViewBag.ListaConvidados = new SelectList(convidadosDao.ListarTodos(), "id", "nome");
+                if(idConvidado == 0)
+                {
+                    return View();
+                }
+                var lista = inscricoesDao.ListarEventos(idConvidado);
+                return PartialView("_ListaEventos", lista);
             }
             catch (Exception ex)
             {
@@ -126,4 +162,5 @@ namespace Projeto02.GestaoEventos.Controllers
             }
         }
     }
+
 }
