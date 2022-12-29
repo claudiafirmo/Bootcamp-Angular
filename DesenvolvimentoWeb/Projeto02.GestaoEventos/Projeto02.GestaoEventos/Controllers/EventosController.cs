@@ -18,17 +18,22 @@ namespace Projeto02.GestaoEventos.Controllers
         {
             return View();
         }
+        /* sobrepondo a rota dando um apelido a ela para o usuário*/
+        [Route("/listaEventos")]
         [HttpGet]
         public IActionResult ListarTodos()
         {
             return View(dao.ListarTodos());
         }
+
+        [Route("/novoEvento")]
         [HttpGet]
         public IActionResult CadastroEvento()
         {
             return View();
         }
-
+        
+        [Route("/novoEvento")]
         [HttpPost]
         public IActionResult CadastroEvento(Evento evento)
         {
@@ -62,12 +67,16 @@ namespace Projeto02.GestaoEventos.Controllers
 
                 return View("_Erro", e);
             }
-        } 
+        }
+
+        [Route("/excluirEvento/{id}")]
         [HttpGet]
         public IActionResult RemoverEvento(int id)
         {
            return ProcessarEvento(id, "RemoverEvento");
         }
+
+        [Route("/excluirEvento/{id}")]
         [HttpPost]
         public IActionResult RemoverEvento(Evento evento)
         {
@@ -82,11 +91,15 @@ namespace Projeto02.GestaoEventos.Controllers
                 return View("_Erro", e);
             }
         }
+
+        [Route("/alterarEvento/{id}")]
         [HttpGet]
         public IActionResult AlterarEvento(int id)
         {
            return ProcessarEvento(id, "AlterarEvento");
         }
+        
+        [Route("/alterarEvento/{id}")]
         [HttpPost]
         public IActionResult AlterarEvento(Evento evento)
         {

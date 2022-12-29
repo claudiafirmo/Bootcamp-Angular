@@ -154,7 +154,7 @@ namespace Projeto02.GestaoEventos.Controllers
                     return View();
                 }
                 var lista = inscricoesDao.ListarEventos(idConvidado);
-                return PartialView("_ListaEventos", lista);
+                return PartialView("_ListaConvidados", lista);
             }
             catch (Exception ex)
             {
