@@ -32,9 +32,22 @@ namespace Projeto03.ConceitosWebApi.Controllers
 
         [HttpGet]
         [Route("lista")]
-        public IEnumerable<Curso> GetCurso()
+        public IEnumerable<Curso> GetCursos()
         {
             return Utils.ListarCursos();
         } 
+        
+        [HttpGet]
+        [Route("lista/{id}")]
+        public Curso? GetCurso(int id)
+        {
+            return Utils.ListarCursos().FirstOrDefault(p => p.Id == id);
+        }
+
+        [HttpPost]
+        public Curso PostCurso(Curso curso)
+        {
+            return curso;
+        }
     }
 }

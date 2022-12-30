@@ -12,5 +12,7 @@
                 new Curso() { Id = 13,Ch = 40, Descricao = "Lógica de Programação" , Preco = 30.00}
             };
         }
+
+
     }
 }
