@@ -6,9 +6,24 @@ namespace Projeto02.GestaoEventos.DataAccess
 {
     public class ConvidadosDao : Dao, ICrud<Convidado>
     {
-        public bool Alterar(Convidado entidade)
+        public Convidado Alterar(Convidado entidade, int id = 0)
         {
-            throw new NotImplementedException();
+            try
+            {
+                AbrirConexao();
+                if(id > 0)
+                {
+                    entidade.id = id;
+                }
+                string sql = "UPDATE administracao.tb_convidados SET cpf = @cpf, nome = @nome, email = @email WHERE id = @id";
+                Conn.Execute(sql, new { entidade.cpf, entidade.nome, entidade.email, entidade.id });
+                return entidade;
+            }
+            finally
+            {
+                FecharConexao();
+            }
+            
         }
 
         public Convidado Buscar(int id)
@@ -17,17 +32,21 @@ namespace Projeto02.GestaoEventos.DataAccess
             return Conn.QueryFirstOrDefault<Convidado>(sql, new { id });
         }
 
-        public Convidado Incluir(Convidado entidade)
+        public Convidado? Incluir(Convidado entidade)
         {
             try
             {
                 AbrirConexao();
                 string sql = "INSERT INTO administracao.tb_convidados (cpf, nome, email) " +
                     "VALUES (@cpf, @nome, @email)";
-                Conn.Execute(sql, new { entidade.cpf, entidade.nome, entidade.email });
+                int registros = Conn.Execute(sql, new { entidade.cpf, entidade.nome, entidade.email });
 
                 // retornando o objeto inserido
-                return Conn.QueryFirstOrDefault<Convidado>("SELECT * FROM administracao.tb_convidados WHERE id = (SELECT MAX(id) FROM administracao.tb_convidados)");
+                if(registros > 0){
+                    Convidado convidado = Conn.QueryFirstOrDefault<Convidado>("SELECT * FROM administracao.tb_convidados WHERE id = (SELECT MAX(id) FROM administracao.tb_convidados)");
+                    return convidado;
+                }
+                return null;
             }
             finally
             {
@@ -48,9 +67,28 @@ namespace Projeto02.GestaoEventos.DataAccess
             }
         }
 
-        public bool Remover(Convidado entidade)
+        public bool Remover(int id)
         {
-            throw new NotImplementedException();
+            bool b = false;
+            try
+            {
+                AbrirConexao();
+                int registros = Conn.Execute("DELETE FROM administracao.tb_convidados WHERE id = @id", new { id });
+                if(registros > 0) 
+                {
+                    b = true;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                FecharConexao();
+            }
+            return b;
         }
     }
 }

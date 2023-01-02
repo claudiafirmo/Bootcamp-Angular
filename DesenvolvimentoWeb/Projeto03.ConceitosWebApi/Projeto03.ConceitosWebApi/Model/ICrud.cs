@@ -3,10 +3,10 @@
     // Create, Read (Retrieve), Update and Delete  - CRUD
     public interface ICrud<T>
     {
-        T Incluir(T entidade);
+        T? Incluir(T entidade);
         IEnumerable<T> ListarTodos();
         T Buscar(int id);
-        bool Alterar(T entidade);
-        bool Remover(T entidade);
+        T Alterar(T entidade, int id = 0);
+        bool Remover(int id);
     }
 }

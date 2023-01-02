@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastro de convidados para seu evento">
+    <title>Cadastro de convidados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .margem{
+            margin: auto;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container margem">
+        <h2>Novo Convidado</h2>
+
+        <div>
+            <div class="mb-3">
+                <label for="" class="form-label">CPF:</label>
+                <input type="text" class="form-control" id="cpf" maxlength="11"/>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" />
+            </div>
+            <!--type submit valida o input email, tanto faz ser button ou submit-->
+            <button type="submit" class="btn btn-primary" id="btnIncluir">Incluir</button>
+
+            <div class="mb-3">
+                <div id="resposta"></div>
+            </div>
+            <hr />
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
