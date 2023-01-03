@@ -8,35 +8,52 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .margem{
-            margin: auto;
+            margin: auto 20%;
             max-width: 400px;
         }
     </style>
 </head>
 <body>
-    <div class="container margem">
-        <h2>Novo Convidado</h2>
-
-        <div>
-            <div class="mb-3">
-                <label for="" class="form-label">CPF:</label>
-                <input type="text" class="form-control" id="cpf" maxlength="11"/>
+    <div class="container">
+        <!--Row aceita total e 12 colunas - Divisao da tela sera de 5 de um lado e 7 de outro-->
+        <div class="row">
+            <div class="col-5">
+                <h2>Novo Convidado</h2>
+                <div class="mb-3">
+                    <label for="cpf" class="form-label">CPF:</label>
+                    <input type="text" class="form-control" id="cpf" maxlength="11"/>
+                </div>
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" />
+                </div>
+                <!--type submit valida o input email, tanto faz ser button ou submit-->
+                <button type="submit" class="btn btn-primary" id="btnIncluir">Incluir</button>
+    
+                <div class="mb-3">
+                    <div id="resposta"></div>
+                </div>
+                <hr />
             </div>
-            <div class="mb-3">
-                <label for="" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" />
+            <div class="col-7">
+                <h2>Lista de convidados:</h2>
+                <table class="table table-striped" id="tabela">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>CPF</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
-            <div class="mb-3">
-                <label for="" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" />
-            </div>
-            <!--type submit valida o input email, tanto faz ser button ou submit-->
-            <button type="submit" class="btn btn-primary" id="btnIncluir">Incluir</button>
-
-            <div class="mb-3">
-                <div id="resposta"></div>
-            </div>
-            <hr />
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
