@@ -1,0 +1,24 @@
+{
+  "produtos": [
+    {
+      "descricao": "Teclado",
+      "preco": 89,
+      "id": 1
+    },
+    {
+      "descricao": "Camisa",
+      "preco": 100,
+      "id": 2
+    },
+    {
+      "descricao": "Violão Hofman IA-293",
+      "preco": 900,
+      "id": 4
+    },
+    {
+      "descricao": "Amaciante",
+      "preco": 40,
+      "id": 5
+    }
+  ]
+}
