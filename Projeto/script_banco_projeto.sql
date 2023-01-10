@@ -1,6 +1,6 @@
 -- Script do banco de dados do Projeto final - Recursos Humanos
 
-CREATE database dbrecursoshumanos;
+--CREATE database dbrecursoshumanos;
 
 create table if not EXISTS tb_modalidade(
 	id serial,
