@@ -6,16 +6,46 @@
   <div class="row">
 
     <div class="col-6">
-      <h3>Exemplo 01 - Binding Unidirecional (property binding - Vínculo atraves de propriedade)</h3>
+      <h3>Exemplo 01 - Binding Unidirecional</h3>
       <span>Número aleatório: </span>
+      <!-- (PROPERTY binding [] - Vínculo atraves de propriedade) -->
       <input type="text" [value]="rnd" />
       <div class="mb-3">
-        <button class="btn btn-primary">Alterar</button>
+        <!--(EVENT binding () - Vínculo atraves de um evento)  -->
+        <button (click)="gerarNumero()" class="btn btn-primary">Alterar</button>
       </div>
+      <hr>
+
+      <h3>Exemplo 03 - Diretiva ngFor + filtros / Binding Unidirecional</h3>
+      <input type="text" #conteudo (keyup)="filtrar(conteudo.value)"/>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of pessoas">
+            <td>{{p.nome}}</td>
+            <td>{{p.idade}}</td>
+          </tr>
+        </tbody>
+      </table>
+
     </div>
 
     <div class="col-6">
-
+      <h3>Exemplo 02 - Diretivas ngFor e ngIf</h3>
+      <div class="mb-3">
+        <select class="form-select" #lista (change)="mostrar(lista.value)">
+          <option value="">SELECIONE</option>
+          <option *ngFor="let pessoa of pessoas" [value]="pessoa.nome">{{pessoa.nome}} - {{pessoa.idade}} anos</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <div class="alert alert-primary" *ngIf="nomePessoa">Nome selecionado: {{nomePessoa}}</div>
+      </div>
     </div>
 
   </div>

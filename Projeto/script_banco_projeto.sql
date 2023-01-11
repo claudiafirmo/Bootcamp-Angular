@@ -69,7 +69,7 @@ create table if not exists tb_candidato(
 	CONSTRAINT ck_cpf check (length(cpf) = 11),
 	CONSTRAINT uq_cpf unique(cpf),
 	CONSTRAINT ck_telefone check (length(telefone) = 11 or length(telefone) = 10),
-	CONSTRAINT ck_email check(email like '.@.')
+	CONSTRAINT ck_email check(email like '%@%')
 );
 
 CREATE TABLE IF NOT EXISTS tb_vaga (
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS tb_vaga (
 	idescolaridade 	int not null,
 	titulo_vaga 		VARCHAR(100) NOT NULL,
 	descricao 			text NOT NULL,
-	salario 			REAL NOT NULL,
+	salario 			decimal(11,2) NOT NULL,
 	data_limite_inscricao TIMESTAMP NOT NULL,
 	CONSTRAINT pk_vaga PRIMARY KEY(id),
 	CONSTRAINT fk_idempresa_tbvagas FOREIGN KEY (idempresa) REFERENCES tb_empresa(id),
