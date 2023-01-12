@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Pessoa } from "./classes/pessoa";
+import { PessoaService } from './services/pessoa.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'exemplos',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
 
-  constructor() { }
+  constructor(private pessoaService: PessoaService) { }
 
   // implementação da interface
   ngOnInit(): void {
@@ -21,20 +22,14 @@ export class AppComponent implements OnInit {
   rnd!: number; // retorna um valor entre 0 e 1
 
   gerarNumero(): void {
-    this.rnd = Math.random();
+    this.rnd = Math.random() * 100;
   }
 
   // Exemplo 02 - produzindo uma lista de pessoas
   pessoas!: Pessoa[];
 
   listar(): void {
-    this.pessoas = [
-      { nome: "Pedro", idade: 32 },
-      { nome: "Antonia", idade: 12 },
-      { nome: "Julia", idade: 18 },
-      { nome: "Lucas", idade: 19 },
-      { nome: "Osvaldo", idade: 52 }
-    ];
+    this.pessoas = this.pessoaService.listarPessoas();
   }
 
   nomePessoa!: string;
