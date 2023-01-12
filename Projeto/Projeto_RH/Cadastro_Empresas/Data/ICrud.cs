@@ -1,4 +1,4 @@
-﻿namespace Cadastro_Empresas.Model
+﻿namespace Cadastro_Empresas.Data
 {
     public interface ICrud<T>
     {

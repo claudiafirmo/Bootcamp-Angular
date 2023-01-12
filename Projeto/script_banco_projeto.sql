@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS tb_vaga (
 	idescolaridade 	int not null,
 	titulo_vaga 		VARCHAR(100) NOT NULL,
 	descricao 			text NOT NULL,
-	salario 			decimal(11,2) NOT NULL,
+	salario 			DECIMAL(11,2) NOT NULL,
 	data_limite_inscricao TIMESTAMP NOT NULL,
 	CONSTRAINT pk_vaga PRIMARY KEY(id),
 	CONSTRAINT fk_idempresa_tbvagas FOREIGN KEY (idempresa) REFERENCES tb_empresa(id),
