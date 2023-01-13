@@ -1,5 +1,6 @@
 ﻿using Cadastro_Empresas.Model;
 using Dapper;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Cadastro_Empresas.Data
@@ -8,17 +9,86 @@ namespace Cadastro_Empresas.Data
     {
         public Empresa Alterar(Empresa objeto, int id = 0)
         {
+            //try
+            //{
+            //    AbrirConexao();
+            //    if (id > 0)
+            //    {
+            //        objeto.Id = id;
+            //    }
+
+
+
+            //}
+            //finally
+            //{
+            //    FecharConexao();
+            //}
+
             throw new NotImplementedException();
+
         }
 
         public Empresa Buscar(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                AbrirConexao();
+                var empresa = Conn.QueryFirstOrDefault<EmpresaDTO>("Select * from tb_empresa where id = @id", new { id });
+                if (empresa != null)
+                {
+                    Empresa empresaBuscada = new Empresa()
+                    {
+                        Id = empresa.id,
+                        IdEndereco = empresa.idendereco,
+                        Cnpj = empresa.cnpj,
+                        Nome = empresa.nome,
+                        Site = empresa.site,
+                        Telefone = empresa.telefone,
+                        RazaoSocial = empresa.razaosocial
+                    };
+
+                    var endereco = Conn.QueryFirstOrDefault<Endereco>("Select logradouro, cep, cidade, uf, numero from tb_endereco where id = @id", new { id = empresaBuscada.IdEndereco });
+
+                    empresaBuscada.EnderecoInfo = endereco;
+                    return empresaBuscada;
+                }
+                else
+                {
+                    throw new Exception("Não há nenhuma empresa com este id");
+                }
+            }
+            finally
+            {
+                FecharConexao();
+            }
         }
 
         public Empresa? Incluir(Empresa objeto)
         {
-            throw new NotImplementedException();
+            try
+            {
+                AbrirConexao();
+
+                var endereco = objeto.EnderecoInfo;
+
+                string sql = "INSERT INTO tb_endereco (logradouro, cep, cidade, uf, numero) VALUES (@log, @cep, @cid, @uf, @num)";
+
+                Conn.Execute(sql, new { log = endereco.Logradouro, cep = endereco.Cep, cid = endereco.Cidade, uf = endereco.Uf, num = endereco.Numero });
+
+                int ultimoIdEndereco = Conn.QueryFirstOrDefault("Select max(id) from tb_endereco");
+
+                sql = "INSERT INTO tb_empresa (idendereco, nome, razaosocial, cnpj, telefone, site) VALUES(@idEnd, @nome, @rs, @cnpj, @tel, @site)";
+
+                Conn.Execute(sql, new { idEnd = ultimoIdEndereco, nome = objeto.Nome, rs = objeto.RazaoSocial, cnpj = objeto.Cnpj, tel = objeto.Telefone, site = objeto.Site });
+
+                return Buscar(objeto.Id);
+
+            }
+            finally
+            {
+                FecharConexao();
+            }
         }
 
         public IEnumerable<Empresa> ListarTodos()
@@ -35,7 +105,7 @@ namespace Cadastro_Empresas.Data
                     {
                         Id = item.id,
                         IdEndereco = item.idendereco,
-                        Cpnj = item.cpnj,
+                        Cnpj = item.cnpj,
                         Nome= item.nome,
                         Site=item.site,
                         Telefone= item.telefone,

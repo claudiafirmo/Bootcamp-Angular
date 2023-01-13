@@ -7,7 +7,7 @@ namespace Cadastro_Empresas.Model
         public int Id { get; set; }
         public string? Nome { get; set; }
         public string? RazaoSocial { get; set; }
-        public string? Cpnj { get; set; }
+        public string? Cnpj { get; set; }
         public int IdEndereco { get; set; }
         public Endereco EnderecoInfo { get; set; }
         public string? Telefone { get; set; }
