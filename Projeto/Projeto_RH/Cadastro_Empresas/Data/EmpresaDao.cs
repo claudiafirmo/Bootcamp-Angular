@@ -74,6 +74,8 @@ namespace Cadastro_Empresas.Data
 
                 string sql = "INSERT INTO tb_endereco (logradouro, cep, cidade, uf, numero) VALUES (@log, @cep, @cid, @uf, @num)";
 
+                // Erro : Duplicate primary key
+
                 Conn.Execute(sql, new { log = endereco.Logradouro, cep = endereco.Cep, cid = endereco.Cidade, uf = endereco.Uf, num = endereco.Numero });
 
                 int ultimoIdEndereco = Conn.QueryFirstOrDefault("Select max(id) from tb_endereco");
