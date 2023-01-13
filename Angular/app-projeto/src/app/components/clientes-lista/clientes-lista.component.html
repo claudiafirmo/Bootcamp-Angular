@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>CPF</td>
+                <td>Nome</td>
+                <td>Telefone</td>
+                <td>Email</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of clientes">
+                <td>{{ c.cpf }}</td>
+                <td>{{ c.nome }}</td>
+                <td>{{ c.telefone }}</td>
+                <td>{{ c.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
