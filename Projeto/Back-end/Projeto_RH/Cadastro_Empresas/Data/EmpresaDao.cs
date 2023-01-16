@@ -29,34 +29,39 @@ namespace Cadastro_Empresas.Data
 
         }
 
+        private Empresa BuscaEmpresa(int id)
+        {
+            var empresa = Conn.QueryFirstOrDefault<EmpresaDTO>("Select * from tb_empresa where id = @id", new { id });
+            if (empresa != null)
+            {
+                Empresa empresaBuscada = new Empresa()
+                {
+                    Id = empresa.id,
+                    IdEndereco = empresa.idendereco,
+                    Cnpj = empresa.cnpj,
+                    Nome = empresa.nome,
+                    Site = empresa.site,
+                    Telefone = empresa.telefone,
+                    RazaoSocial = empresa.razaosocial
+                };
+
+                var endereco = Conn.QueryFirstOrDefault<Endereco>("Select logradouro, cep, cidade, uf, numero from tb_endereco where id = @id", new { id = empresaBuscada.IdEndereco });
+
+                empresaBuscada.EnderecoInfo = endereco;
+                return empresaBuscada;
+            }
+            else
+            {
+                throw new Exception("Não há nenhuma empresa com este id");
+            }
+        }
+
         public Empresa Buscar(int id)
         {
             try
             {
                 AbrirConexao();
-                var empresa = Conn.QueryFirstOrDefault<EmpresaDTO>("Select * from tb_empresa where id = @id", new { id });
-                if (empresa != null)
-                {
-                    Empresa empresaBuscada = new Empresa()
-                    {
-                        Id = empresa.id,
-                        IdEndereco = empresa.idendereco,
-                        Cnpj = empresa.cnpj,
-                        Nome = empresa.nome,
-                        Site = empresa.site,
-                        Telefone = empresa.telefone,
-                        RazaoSocial = empresa.razaosocial
-                    };
-
-                    var endereco = Conn.QueryFirstOrDefault<Endereco>("Select logradouro, cep, cidade, uf, numero from tb_endereco where id = @id", new { id = empresaBuscada.IdEndereco });
-
-                    empresaBuscada.EnderecoInfo = endereco;
-                    return empresaBuscada;
-                }
-                else
-                {
-                    throw new Exception("Não há nenhuma empresa com este id");
-                }
+                return BuscaEmpresa(id);
             }
             finally
             {
@@ -72,19 +77,19 @@ namespace Cadastro_Empresas.Data
 
                 var endereco = objeto.EnderecoInfo;
 
-                string sql = "INSERT INTO tb_endereco (logradouro, cep, cidade, uf, numero) VALUES (@log, @cep, @cid, @uf, @num)";
-
-                // Erro : Duplicate primary key
+                string sql = "INSERT INTO tb_endereco (logradouro, cep, cidade, uf, numero) VALUES (@log, @cep, @cid, @uf, @num);";
 
                 Conn.Execute(sql, new { log = endereco.Logradouro, cep = endereco.Cep, cid = endereco.Cidade, uf = endereco.Uf, num = endereco.Numero });
 
-                int ultimoIdEndereco = Conn.QueryFirstOrDefault("Select max(id) from tb_endereco");
+                int ultimoIdEndereco = Conn.QueryFirstOrDefault<int>("Select max(id) from tb_endereco");
 
                 sql = "INSERT INTO tb_empresa (idendereco, nome, razaosocial, cnpj, telefone, site) VALUES(@idEnd, @nome, @rs, @cnpj, @tel, @site)";
 
                 Conn.Execute(sql, new { idEnd = ultimoIdEndereco, nome = objeto.Nome, rs = objeto.RazaoSocial, cnpj = objeto.Cnpj, tel = objeto.Telefone, site = objeto.Site });
 
-                return Buscar(objeto.Id);
+                int idEmpresa = Conn.QueryFirstOrDefault<int>("SELECT max(id) FROM tb_empresa");
+
+                return BuscaEmpresa(idEmpresa);
 
             }
             finally
