@@ -2,6 +2,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
+                <td>ID</td>
                 <td>CPF</td>
                 <td>Nome</td>
                 <td>Telefone</td>
@@ -10,6 +11,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let c of clientes">
+                <td>{{ c.id }}</td>
                 <td>{{ c.cpf }}</td>
                 <td>{{ c.nome }}</td>
                 <td>{{ c.telefone }}</td>

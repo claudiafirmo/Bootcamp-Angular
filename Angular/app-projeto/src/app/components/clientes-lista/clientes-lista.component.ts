@@ -12,7 +12,9 @@ export class ClientesListaComponent implements OnInit {
   constructor(private clientesService: ClientesService) { }
 
   ngOnInit(): void {
-    this.clientes = this.clientesService.getClientes();
+    //this.clientes = this.clientesService.getClientes();
+    this.clientesService.getClientesApi().subscribe(resposta => this.clientes = resposta)
+    //           Observable<Clientes[]>  |Clientes[]| Clientes[]         
   }
 
   clientes: Cliente[] = [];

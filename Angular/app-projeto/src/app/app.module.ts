@@ -10,6 +10,8 @@ import { ErroComponent } from './components/erro/erro.component';
 import { ClientesListaComponent } from './components/clientes-lista/clientes-lista.component';
 import { ClienteNovoComponent } from './components/cliente-novo/cliente-novo.component';
 import { FormsModule } from '@angular/forms';
+// Consumo de API - Qualquer API
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
