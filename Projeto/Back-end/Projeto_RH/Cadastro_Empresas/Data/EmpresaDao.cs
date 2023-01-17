@@ -1,6 +1,5 @@
 ﻿using Cadastro_Empresas.Model;
 using Dapper;
-using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Cadastro_Empresas.Data
@@ -9,24 +8,30 @@ namespace Cadastro_Empresas.Data
     {
         public Empresa Alterar(Empresa objeto, int id = 0)
         {
-            //try
-            //{
-            //    AbrirConexao();
-            //    if (id > 0)
-            //    {
-            //        objeto.Id = id;
-            //    }
+            try
+            {
+                AbrirConexao();
+                if (id > 0)
+                {
+                    objeto.Id = id;
+                }
 
+                int idEndereco = BuscaEmpresa(objeto.Id).IdEndereco;
 
+                string sql = "UPDATE tb_endereco SET logradouro = @log, cep = @cep, cidade = @cidade, uf = @uf, numero = @num WHERE id = @id";
+                Endereco e = objeto.EnderecoInfo;
+                Conn.Execute(sql, new { log = e.Logradouro, cep = e.Cep, cidade = e.Cidade, uf = e.Uf, num = e.Numero, id = idEndereco });
 
-            //}
-            //finally
-            //{
-            //    FecharConexao();
-            //}
+                sql = "UPDATE tb_empresa SET nome = @nome, razaosocial = @rs, cnpj = @cnpj, telefone = @tel, site = @site WHERE id = @id";
 
-            throw new NotImplementedException();
+                Conn.Execute(sql, new { nome = objeto.Nome, rs = objeto.RazaoSocial, cnpj = objeto.Cnpj, tel = objeto.Telefone, site = objeto.Site, id = objeto.Id });
 
+                return BuscaEmpresa(objeto.Id);
+            }
+            finally
+            {
+                FecharConexao();
+            }
         }
 
         private Empresa BuscaEmpresa(int id)
@@ -123,7 +128,7 @@ namespace Cadastro_Empresas.Data
 
                     sb.Append("SELECT logradouro, cep, cidade, uf, numero FROM tb_endereco WHERE id = @id");
 
-                    var endereco = Conn.QueryFirstOrDefault<Endereco>(sb.ToString(), new { id = item.id });
+                    var endereco = Conn.QueryFirstOrDefault<Endereco>(sb.ToString(), new { id = item.idendereco });
 
                     empresa.EnderecoInfo = endereco;
 
@@ -140,7 +145,32 @@ namespace Cadastro_Empresas.Data
 
         public bool Remover(int id)
         {
-            throw new NotImplementedException();
+            bool b = false;
+            try
+            {
+                AbrirConexao();
+                Empresa empresa = BuscaEmpresa(id);
+
+                int registros = Conn.Execute("DELETE FROM tb_empresa WHERE id = @id", new { id });
+
+                Conn.Execute("DELETE FROM tb_endereco WHERE id = @id", new { id = empresa.IdEndereco });
+                if (registros > 0)
+                {
+
+                    b = true;
+
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                FecharConexao();
+            }
+            return b;
+       
         }
     }
 }

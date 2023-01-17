@@ -32,5 +32,32 @@ namespace Cadastro_Empresas.Controllers
         {
             return dao.Incluir(empresa);
         }
+
+        [HttpPut]
+        public Empresa PutEmpresa(Empresa empresa)
+        {
+            return dao.Alterar(empresa);
+        }
+
+        [HttpPut("{id}")]
+        public Empresa PutEmpresa(Empresa empresa, int id)
+        {
+            return dao.Alterar(empresa, id);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteEmpresa(int id)
+        {
+            try
+            {
+                dao.Remover(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
     }
 }
