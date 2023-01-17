@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { EmpresaComponent } from './components/principal/empresa.component';
-import { MenuComponent } from './components/menu/menu.component';
+import { MenuGeralComponent } from './components/menu-geral/menu-geral.component';
+import { MenuPrincipalComponent } from './components/principal/menu-principal/menu-principal.component';
 
 @NgModule({
   declarations: [
     EmpresaComponent,
-    MenuComponent
+    MenuGeralComponent,
+    MenuPrincipalComponent
   ],
   imports: [
     BrowserModule,
