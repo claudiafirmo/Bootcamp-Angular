@@ -20,11 +20,18 @@ namespace Cadastro_Empresas.Controllers
             return dao.ListarTodos();
         }
 
-        // Ver :int com o professor
-        [HttpGet("{id:int}")]
-        public Empresa GetEmpresa(int id)
+        [HttpGet("{id}")]
+        public IActionResult GetEmpresa(int id)
         {
-            return dao.Buscar(id);
+            try
+            {
+                Empresa empresa = dao.Buscar(id);
+                return Ok(empresa);
+
+            }catch(Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         [HttpPost]
@@ -51,11 +58,11 @@ namespace Cadastro_Empresas.Controllers
             try
             {
                 dao.Remover(id);
-                return Ok();
+                return Ok("Empresa removida com sucesso!");
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(e.Message);
             }
 
         }
