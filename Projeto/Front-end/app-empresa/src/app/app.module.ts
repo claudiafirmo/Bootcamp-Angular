@@ -2,15 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { EmpresaComponent } from './components/principal/empresa.component';
+import { EmpresaComponent } from './components/empresa.component';
 import { MenuGeralComponent } from './components/menu-geral/menu-geral.component';
-import { MenuPrincipalComponent } from './components/principal/menu-principal/menu-principal.component';
+import { MenuHomeComponent } from './components/home/menu-home/menu-home.component';
+import { HomeEmpresaComponent } from './components/home/home-empresa/home-empresa.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
     EmpresaComponent,
     MenuGeralComponent,
-    MenuPrincipalComponent
+    MenuHomeComponent,
+    HomeEmpresaComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,
