@@ -7,6 +7,8 @@ import { MenuGeralComponent } from './components/menu-geral/menu-geral.component
 import { MenuHomeComponent } from './components/home/menu-home/menu-home.component';
 import { HomeEmpresaComponent } from './components/home/home-empresa/home-empresa.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [EmpresaComponent]
