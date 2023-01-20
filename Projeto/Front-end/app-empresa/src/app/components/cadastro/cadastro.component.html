@@ -3,52 +3,42 @@
     <form class="margem-form">
         <label for="nome" class="form-label">Nome: </label>
         <input type="text" class="form-control mb-4" [(ngModel)]="empresa.nome" name="nome">
-        <div>{{empresa.nome}}</div>
 
         <label for="razaosocial" class="form-label">Razão Social: </label>
         <input type="text" class="form-control mb-4" [(ngModel)]="empresa.razaoSocial" name="razaosocial">
-        <div>{{empresa.razaoSocial}}</div>
 
         <label for="cnpj" class="form-label">CNPJ: </label>
         <input type="text" class="form-control mb-4" [(ngModel)]="empresa.cnpj" name="cnpj">
-        <div>{{empresa.cnpj}}</div>
 
         <label for="telefone" class="form-label">Telefone: </label>
         <input type="text" class="form-control mb-4" [(ngModel)]="empresa.telefone" name="telefone">
-        <div>{{empresa.telefone}}</div>
         
         <label for="site" class="form-label">Site: </label>
         <input type="text" class="form-control mb-4" [(ngModel)]="empresa.site" name="site">
-        <div>{{empresa.site}}</div>
 
         <h2 class="mb-4">Endereço</h2>
 
         <label for="cep" class="mb-3 form-label">CEP: </label>
-        <input type="number" class="form-control mb-4" [(ngModel)]="endereco.cep" name="cep">
-        <div>{{endereco.cep}}</div>
+        <input type="text" class="form-control mb-4" [(ngModel)]="endereco.cep" name="cep">
         
         
         <label for="logradouro" class="form-label">Logradouro: </label>
         <input type="text" class="form-control mb-4" [(ngModel)]="endereco.logradouro" name="logradouro">
-        <div>{{endereco.logradouro}}</div>
         
         <label for="numero" class="form-label">Numero: </label>
         <input type="number" class="form-control mb-4" [(ngModel)]="endereco.numero" name="numero">
-        <div>{{endereco.numero}}</div>
         
         <label for="uf" class="mb-3 form-label">Estado: </label>
         <select class="mb-3 form-select" [(ngModel)]="endereco.uf" name="uf" id="uf">
             <option value="">Selecione o estado</option>
             <option value="SP">São Paulo</option>
         </select>
-        <div>{{endereco.uf}}</div>
         
         <label for="cidade" class="mb-3 form-label">Cidade: </label>
         <select class="mb-3 form-select" [(ngModel)]="endereco.cidade" name="cidade" id="cidade">
             <option value="">Selecione o cidade</option>
             <option value="São Paulo">São Paulo</option>
         </select>
-        <div>{{endereco.cidade}}</div>
         <button type="submit" class="btn btn-primary" (click)="incluir(empresa)">Finalizar cadastro</button>
     </form>
 </div>
