@@ -19,7 +19,7 @@
         <h2 class="mb-4">Endereço</h2>
 
         <label for="cep" class="mb-3 form-label">CEP: </label>
-        <input type="text" class="form-control mb-4" [(ngModel)]="endereco.cep" name="cep">
+        <input type="text" class="form-control mb-4" [(ngModel)]="endereco.cep" (change)="preencherEnderecoPorCep(endereco.cep)" name="cep">
         
         
         <label for="logradouro" class="form-label">Logradouro: </label>
@@ -29,15 +29,15 @@
         <input type="number" class="form-control mb-4" [(ngModel)]="endereco.numero" name="numero">
         
         <label for="uf" class="mb-3 form-label">Estado: </label>
-        <select class="mb-3 form-select" [(ngModel)]="endereco.uf" name="uf" id="uf">
-            <option value="">Selecione o estado</option>
-            <option value="SP">São Paulo</option>
+        <select class="mb-3 form-select" (change)="listarMunicipiosPorUf(endereco.uf)" [(ngModel)]="endereco.uf" name="uf" id="uf">
+            <option value="" disabled>Selecione o estado</option>
+            <option *ngFor="let estado of estados" [value]="estado.sigla">{{estado.nome}}</option>
         </select>
         
         <label for="cidade" class="mb-3 form-label">Cidade: </label>
         <select class="mb-3 form-select" [(ngModel)]="endereco.cidade" name="cidade" id="cidade">
             <option value="">Selecione o cidade</option>
-            <option value="São Paulo">São Paulo</option>
+            <option *ngFor="let cidade of cidades" [value]="cidade.nome">{{cidade.nome}}</option>
         </select>
         <button type="submit" class="btn btn-primary" (click)="incluir(empresa)">Finalizar cadastro</button>
     </form>
