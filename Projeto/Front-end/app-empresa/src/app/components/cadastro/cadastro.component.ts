@@ -4,7 +4,6 @@ import { Empresa } from 'src/app/interface/EmpresaApi/empresa';
 import { Endereco } from 'src/app/interface/EmpresaApi/endereco';
 import { EmpresaService } from 'src/app/services/empresa.service';
 import { ViacepService } from 'src/app/services/viacep.service';
-import { ViaCep } from "src/app/interface/ViaCepApi/viacep";
 import { LocalidadesService } from 'src/app/services/localidades.service';
 import { Uf } from 'src/app/interface/LocalidadesApi/Estados/uf';
 import { Municipio } from 'src/app/interface/LocalidadesApi/Cidades/municipio';
@@ -30,7 +29,7 @@ export class CadastroComponent implements OnInit {
 
   incluir(empresa: Empresa): void {
     empresa.enderecoInfo = this.endereco;
-    this.empresaService.postEmpresa(empresa).subscribe(() => this.router.navigate(['home']))
+    this.empresaService.postEmpresa(empresa).subscribe(() => this.router.navigate(['login']))
   }
 
   preencherEnderecoPorCep(cep: string): void {

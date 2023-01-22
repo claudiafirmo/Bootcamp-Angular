@@ -9,6 +9,11 @@ import { HomeEmpresaComponent } from './components/home/home-empresa/home-empres
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
+import { LoginComponent } from './components/login/login.component';
+import { PainelEmpresaComponent } from './components/Painel/painel-empresa/painel-empresa.component';
+import { MenuPainelComponent } from './components/Painel/menu-painel/menu-painel.component';
+import { SuasVagasComponent } from './components/Painel/suas-vagas/suas-vagas.component';
+import { DadosUsuarioComponent } from './components/Painel/dados-usuario/dados-usuario.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { FormsModule } from "@angular/forms";
     MenuGeralComponent,
     MenuHomeComponent,
     HomeEmpresaComponent,
-    CadastroComponent
+    CadastroComponent,
+    LoginComponent,
+    PainelEmpresaComponent,
+    MenuPainelComponent,
+    SuasVagasComponent,
+    DadosUsuarioComponent
   ],
   imports: [
     BrowserModule,
