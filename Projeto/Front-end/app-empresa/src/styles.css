@@ -5,3 +5,15 @@
     margin: auto;
     max-width: 500px;
 }
+
+.sem-borda {
+    border: 0px
+}
+
+.espaçamento-superior{
+    padding-top: 10px;
+}
+
+.espaçamento-inferior{
+    padding-bottom: 10px;
+}

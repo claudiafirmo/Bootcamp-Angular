@@ -10,10 +10,12 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { LoginComponent } from './components/login/login.component';
-import { PainelEmpresaComponent } from './components/Painel/painel-empresa/painel-empresa.component';
-import { MenuPainelComponent } from './components/Painel/menu-painel/menu-painel.component';
-import { SuasVagasComponent } from './components/Painel/suas-vagas/suas-vagas.component';
-import { DadosUsuarioComponent } from './components/Painel/dados-usuario/dados-usuario.component';
+import { PainelEmpresaComponent } from './components/painel-empresa/painel-empresa/painel-empresa.component';
+import { MenuPainelComponent } from './components/painel-empresa/menu-painel/menu-painel.component';
+import { SuasVagasComponent } from './components/painel-empresa/suas-vagas/suas-vagas.component';
+import { DadosUsuarioComponent } from './components/painel-empresa/dados-usuario/dados-usuario.component';
+import { PainelAdministrativoComponent } from './components/painel-administrativo/painel-administrativo/painel-administrativo.component';
+import { LoginAdministrativoComponent } from './components/painel-administrativo/login-administrativo/login-administrativo.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { DadosUsuarioComponent } from './components/Painel/dados-usuario/dados-u
     PainelEmpresaComponent,
     MenuPainelComponent,
     SuasVagasComponent,
-    DadosUsuarioComponent
+    DadosUsuarioComponent,
+    PainelAdministrativoComponent,
+    LoginAdministrativoComponent
   ],
   imports: [
     BrowserModule,

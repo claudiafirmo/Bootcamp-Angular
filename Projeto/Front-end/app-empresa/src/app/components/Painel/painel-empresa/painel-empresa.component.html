@@ -1,8 +1,0 @@
-<div class="container">
-  <h1 class="display-5 text mb-3 margem-superior">Painel de Controle:</h1>
-  <app-menu-painel></app-menu-painel>
-  <div>
-    <app-suas-vagas *ngIf="!mostrar; else elseBlock"></app-suas-vagas>
-    <ng-template #elseBlock><app-dados-usuario></app-dados-usuario></ng-template>
-  </div>
-</div>

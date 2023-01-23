@@ -1,11 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
 #apresentacao{
     background-color: #517EA6;
 }
-
-.imagem-vantagem{
-    padding: 10px;
+.apresentacao{
+    color: #FEFAF6;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    background-color: #517EA6;
 }
-
-.cor-textos-principal{
+.cor-textos{
     color: #FEFAF6;
 }
+.card{
+    color: #FEFAF6;
+    font-family: 'Montserrat', sans-serif;
+    background-color:  #549D7D
+}
+.imagem-card{
+    padding: 10px;
+}
+.margem-imagem-card {
+    margin-bottom: 10px;
+}
+.titulo-clientes{
+    color: #FEFAF6;
+    font-size: 40px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+}
+.logo-clientes{
+    padding-top: 10px;
+    padding-bottom: 12px;
+    width: 400px;
+    height: 50;
+}
+.carrossel{
+
+}
+.area-cadastro{
+    background-color: #F28705;
+    margin-top: 12;
+    margin-bottom: 1px;
+}
+.botao-cadastro{
+    background-color:#D96704;
+    border: solid 1px;
+    color: #FEFAF6;
+
+}
+.borda-botao-cadastro{
+    border: solid 1px;
+    color: #FEFAF6;
+}
+.rodape{
+    color: #FEFAF6;
+    font-size: 20px;
+    background-color: #549D7D;
+    padding-top: 10px; 
+    padding-bottom: 10px;
+}
+.espacamento-texto-rodape{
+    padding-bottom: 5px;
+}
+.rodape-direitos{
+    font-size: 17px;
+    color: #FEFAF6;
+}
+.imagem-contato{
+    
+}
+.margem-imagem-contato {
+    margin-bottom: 10px;
+}
+
+
