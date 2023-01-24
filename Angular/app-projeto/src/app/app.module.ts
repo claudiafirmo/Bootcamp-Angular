@@ -12,6 +12,7 @@ import { ClienteNovoComponent } from './components/cliente-novo/cliente-novo.com
 import { FormsModule } from '@angular/forms';
 // Consumo de API - Qualquer API
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     ClientesComponent,
     ErroComponent,
     ClientesListaComponent,
-    ClienteNovoComponent
+    ClienteNovoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

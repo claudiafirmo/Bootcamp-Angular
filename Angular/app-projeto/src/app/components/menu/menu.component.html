@@ -13,6 +13,26 @@
             <a class="nav-link" routerLink="/clientes">Clientes</a>
           </li>
         </ul>
+        <div *ngIf="!usuario_logado">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/registro">Registre-se</a>
+            </li>
+          </ul>
+        </div>
+        <div *ngIf="usuario_logado">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/home">{{usuario_logado}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/login">Logout</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
