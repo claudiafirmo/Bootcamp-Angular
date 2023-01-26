@@ -13,6 +13,10 @@ import { FormsModule } from '@angular/forms';
 // Consumo de API - Qualquer API
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
+import { ClienteAlteracaoComponent } from './components/cliente-alteracao/cliente-alteracao.component';
+import { ClienteRemocaoComponent } from './components/cliente-remocao/cliente-remocao.component';
+import { SubListaPipe } from './pipes/sub-lista.pipe';
+import { ValidaCelularPipe } from './pipes/valida-celular.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { LoginComponent } from './components/login/login.component';
     ErroComponent,
     ClientesListaComponent,
     ClienteNovoComponent,
-    LoginComponent
+    LoginComponent,
+    ClienteAlteracaoComponent,
+    ClienteRemocaoComponent,
+    SubListaPipe,
+    ValidaCelularPipe
   ],
   imports: [
     BrowserModule,

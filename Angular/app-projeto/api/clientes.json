@@ -1,16 +1,9 @@
 {
   "apiclientes": [
     {
-      "id": 1,
-      "cpf": "52040863074",
-      "nome": "Gonzales Laurin",
-      "email": "oficialLaurin@mail.com",
-      "telefone": "5425-9635"
-    },
-    {
       "id": 2,
       "cpf": "85246937405",
-      "nome": "Alex Henrique Souza",
+      "nome": "Alexsander Kothe",
       "email": "alex@mail.com",
       "telefone": "4855-9674"
     },
@@ -20,6 +13,34 @@
       "email": "barbarinha@mail.com",
       "telefone": "1197536542",
       "id": 3
+    },
+    {
+      "cpf": "12521521251",
+      "nome": "Elizabeth Webber",
+      "email": "liz@mail.com",
+      "telefone": "11925285852",
+      "id": 4
+    },
+    {
+      "cpf": "85465469535",
+      "nome": "Thiago Fritz",
+      "email": "thiagao@mail.com",
+      "telefone": "11924632569",
+      "id": 5
+    },
+    {
+      "cpf": "45469449535",
+      "nome": "Arthur Cervero",
+      "email": "arthur@mail.com",
+      "telefone": "11957432569",
+      "id": 6
+    },
+    {
+      "cpf": "80393860043",
+      "nome": "Joui Jouki",
+      "email": "JouiJouki@mail.com",
+      "telefone": "6659-8325",
+      "id": 7
     }
   ]
 }

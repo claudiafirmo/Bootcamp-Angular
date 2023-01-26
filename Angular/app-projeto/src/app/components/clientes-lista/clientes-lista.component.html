@@ -1,4 +1,10 @@
+
 <div class="container">
+    <div class="mb-3 alert alert-primary">
+        <label class="form-label" for="">Informe partes do nome:</label>
+        <input type="text" class="form-control" #busca (keyup)="0"/>
+    </div>
+
     <table class="table table-striped">
         <thead>
             <tr>
@@ -7,15 +13,27 @@
                 <td>Nome</td>
                 <td>Telefone</td>
                 <td>Email</td>
+                <td></td>
+                <td></td>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let c of clientes">
+            <tr *ngFor="let c of clientes | sublista:busca.value">
                 <td>{{ c.id }}</td>
                 <td>{{ c.cpf }}</td>
-                <td>{{ c.nome }}</td>
-                <td>{{ c.telefone }}</td>
+                <td>{{ c.nome | uppercase }}</td>
+                <td>{{ c.telefone | validacelular}}</td>
                 <td>{{ c.email }}</td>
+                <td>
+                    <a  type="button" routerLink="/clientes/alterar/{{c.id}}">
+                        <i class="bi bi-pencil"></i>
+                    </a>
+                </td>
+                <td>
+                    <a  type="button" routerLink="/clientes/remover/{{c.id}}">
+                        <i class="bi bi-trash"></i>
+                    </a>
+                </td>
             </tr>
         </tbody>
     </table>

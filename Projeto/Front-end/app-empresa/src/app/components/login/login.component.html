@@ -1,14 +1,27 @@
-<div class="container margem-superior">
-    <h1 class="text-lg-center margem-titulo-inferior">Login</h1>
-    <form class="margem-form mb-5">
+<div class="row">
+  <div class="imagem col-6">
+    <img src="assets/images/login.png" alt="" width="1000" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="area-login col-6">
+    <div class="area-login container">
+      <h1 class="text-lg-center texto-cabecalho">Bem vindo novamente!</h1>
+      <h4 class="texto-secundario">Não tem uma conta ainda? Cadastre-se</h4>
+      <form class="margem-form mb-5">
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="CNPJ">
-            <label for="floatingInput">CNPJ</label>
-          </div>
-          <div class="form-floating mb-4">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
-            <label for="floatingPassword">Senha</label>
-          </div>
-        <button type="button" class="btn btn-primary" (click)="entrar()">Entrar</button>
-    </form>
+          <input type="text" class="form-control" id="floatingInput" placeholder="CNPJ">
+          <label for="floatingInput caixa-input">CNPJ</label>
+        </div>
+        <div class="form-floating mb-4">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
+          <label for="floatingPassword">Senha</label>
+        </div>
+        <div class="alinhamento-botao">
+        <button type="button" class="btn botao hover" (click)="entrar()">Entrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
