@@ -14,10 +14,32 @@ namespace Cadastro_Empresas.Controllers
             dao = new EmpresaDao();
         }
 
+        //[HttpGet]
+        //public IEnumerable<Empresa> GetEmpresas([FromQuery(Name = "cnpj")] string? cnpj)
+        //{
+        //    return dao.ListarTodos();
+        //}]
+
         [HttpGet]
-        public IEnumerable<Empresa> GetEmpresas()
+        public IActionResult GetEmpresas([FromQuery(Name = "cnpj")] string? cnpj)
         {
-            return dao.ListarTodos();
+            if(cnpj == null)
+            {
+                return Ok(dao.ListarTodos());
+            }
+            else
+            {
+                try
+                {
+                    Empresa empresa = dao.BuscarPorCnpj(cnpj);
+                    return Ok(empresa);
+
+                }
+                catch (Exception e)
+                {
+                    return BadRequest(e.Message);
+                }
+            }
         }
 
         [HttpGet("{id}")]
@@ -28,11 +50,25 @@ namespace Cadastro_Empresas.Controllers
                 Empresa empresa = dao.Buscar(id);
                 return Ok(empresa);
 
-            }catch(Exception e)
+            } catch (Exception e)
             {
                 return BadRequest(e.Message);
             }
         }
+
+        //[HttpGet("{cnpj}")]
+        //public IActionResult GetEmpresaPorCnpj([FromQuery(Name = "cnpj")] string? cnpj)
+        //{
+        //    try
+        //    {
+        //        Empresa empresa = dao.BuscarPorCnpj(cnpj);
+        //        return Ok(empresa);
+
+        //    }catch(Exception e)
+        //    {
+        //        return BadRequest(e.Message);
+        //    }
+        //}
 
         [HttpPost]
         public Empresa? PostIncluirEmpresa(Empresa empresa) 
