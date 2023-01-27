@@ -120,11 +120,15 @@ namespace Cadastro_Empresas.Data
 
                 int ultimoIdEndereco = Conn.QueryFirstOrDefault<int>("Select max(id) from tb_endereco");
 
-                sql = "INSERT INTO tb_empresa (idendereco, nome, razaosocial, cnpj, telefone, site) VALUES(@idEnd, @nome, @rs, @cnpj, @tel, @site)";
+                sql = "INSERT INTO tb_empresa (idendereco, nome, razaosocial, cnpj, telefone, site) VALUES (@idEnd, @nome, @rs, @cnpj, @tel, @site)";
 
                 Conn.Execute(sql, new { idEnd = ultimoIdEndereco, nome = objeto.Nome, rs = objeto.RazaoSocial, cnpj = objeto.Cnpj, tel = objeto.Telefone, site = objeto.Site });
 
                 int idEmpresa = Conn.QueryFirstOrDefault<int>("SELECT max(id) FROM tb_empresa");
+
+                // Insere usuario para a empresa - usuario = cnpj e senha = cnpj
+                sql = "INSERT INTO tb_usuarios (nome, senha, nivel) VALUES (@cnpj, @senha, 2)";
+                Conn.Execute(sql, new { cnpj = objeto.Cnpj, senha = objeto.Cnpj, });
 
                 return BuscaEmpresa(idEmpresa);
 
