@@ -1,20 +1,5 @@
-<div class="div-centralizada">
-    <div class="cabecalho-com-imagem">
-        <img src="assets/images/cabecalho.png" alt="" width="1320" />
-        <div class="textos-imagem">
-            <div class="titulo-imagem ">
-                Anunciar uma vaga e recrutar <br>
-                talentos nunca foi tão fácil
-            </div>
-            <div class="subtitulo-imagem">
-                Publique uma vaga de emprego e receba <br>
-                os melhores currículos
-            </div>
-        </div>
-    </div>
-</div>
 <div class="container cor-formulario">
-    <h1 class="text-lg-center titulo">Cadastro de empresa</h1>
+    <h1 class="text-lg-center titulo">Alteração de dados</h1>
     <form class="margem-form">
         <label for="nome" class="form-label titulo-campos">Nome: </label>
         <input type="text" class="form-control mb-4 caixa-texto" [(ngModel)]="empresa.nome" name="nome">
@@ -51,13 +36,11 @@
         <select class="mb-3 form-select caixa-texto" [(ngModel)]="endereco.cidade" name="cidade" id="cidade">
             <option value="titulo-campos">Selecione a cidade</option>
             <option *ngFor="let cidade of cidades" [value]="cidade.nome">{{cidade.nome}}</option>
+            <option [value]="endereco.cidade">{{endereco.cidade}}</option>
         </select>
-
-        <label for="senha" class="form-label titulo-campos">Senha: </label>
-        <input type="text" class="form-control mb-4 caixa-texto" [(ngModel)]="empresa.senha" name="senha">
-
         <div class="botao-centralizado espacamento-externo-botao">
-            <button type="submit" class="btn botao hover"  (click)="incluir(empresa)">Finalizar cadastro</button>
+            <button type="submit" class="btn botao hover" (click)="Alterar(empresa)">Alterar</button>
+            <button type="submit" class="btn botao hover" routerLink="/painelEmpresa">Voltar ao painel</button>
         </div>
     </form>
 </div>

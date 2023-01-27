@@ -1,6 +1,7 @@
 ﻿using Cadastro_Empresas.Data;
 using Cadastro_Empresas.Model;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace Cadastro_Empresas.Controllers
 {
@@ -13,12 +14,6 @@ namespace Cadastro_Empresas.Controllers
         {
             dao = new EmpresaDao();
         }
-
-        //[HttpGet]
-        //public IEnumerable<Empresa> GetEmpresas([FromQuery(Name = "cnpj")] string? cnpj)
-        //{
-        //    return dao.ListarTodos();
-        //}]
 
         [HttpGet]
         public IActionResult GetEmpresas([FromQuery(Name = "cnpj")] string? cnpj)
@@ -56,20 +51,6 @@ namespace Cadastro_Empresas.Controllers
             }
         }
 
-        //[HttpGet("{cnpj}")]
-        //public IActionResult GetEmpresaPorCnpj([FromQuery(Name = "cnpj")] string? cnpj)
-        //{
-        //    try
-        //    {
-        //        Empresa empresa = dao.BuscarPorCnpj(cnpj);
-        //        return Ok(empresa);
-
-        //    }catch(Exception e)
-        //    {
-        //        return BadRequest(e.Message);
-        //    }
-        //}
-
         [HttpPost]
         public Empresa? PostIncluirEmpresa(Empresa empresa) 
         {
@@ -77,15 +58,29 @@ namespace Cadastro_Empresas.Controllers
         }
 
         [HttpPut]
-        public Empresa PutEmpresa(Empresa empresa)
+        public IActionResult PutEmpresa(Empresa empresa)
         {
-            return dao.Alterar(empresa);
+            try
+            {
+                return Ok(dao.Alterar(empresa));
+            }
+            catch (Exception)
+            {
+                return BadRequest("Não foi possível alterar seus dados, tente mais tarde ou entre em contato com nossa Central de atendimento - 0800 5540 9635");
+            }
         }
 
         [HttpPut("{id}")]
-        public Empresa PutEmpresa(Empresa empresa, int id)
+        public IActionResult PutEmpresa(Empresa empresa, int id)
         {
-            return dao.Alterar(empresa, id);
+            try
+            {
+                return Ok(dao.Alterar(empresa, id));
+            }
+            catch (Exception)
+            {
+                return BadRequest("Não foi possível alterar seus dados, tente mais tarde ou entre em contato com nossa Central de atendimento - 0800 5540 9635");
+            }
         }
 
         [HttpDelete("{id}")]
@@ -93,8 +88,7 @@ namespace Cadastro_Empresas.Controllers
         {
             try
             {
-                dao.Remover(id);
-                return Ok("Empresa removida com sucesso!");
+                return Ok(dao.Remover(id));
             }
             catch (Exception e)
             {

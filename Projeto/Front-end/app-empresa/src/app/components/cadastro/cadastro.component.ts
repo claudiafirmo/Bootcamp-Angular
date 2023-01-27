@@ -7,6 +7,7 @@ import { ViacepService } from 'src/app/services/viacep.service';
 import { LocalidadesService } from 'src/app/services/localidades.service';
 import { Uf } from 'src/app/interface/LocalidadesApi/Estados/uf';
 import { Municipio } from 'src/app/interface/LocalidadesApi/Cidades/municipio';
+import { Usuario } from 'src/app/classes/usuario';
 
 @Component({
   selector: 'app-cadastro',

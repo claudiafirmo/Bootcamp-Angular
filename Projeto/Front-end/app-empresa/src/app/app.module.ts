@@ -15,7 +15,9 @@ import { MenuPainelComponent } from './components/painel-empresa/menu-painel/men
 import { SuasVagasComponent } from './components/painel-empresa/suas-vagas/suas-vagas.component';
 import { DadosUsuarioComponent } from './components/painel-empresa/dados-usuario/dados-usuario.component';
 import { PainelAdministrativoComponent } from './components/painel-administrativo/painel-administrativo/painel-administrativo.component';
-import { LoginAdministrativoComponent } from './components/painel-administrativo/login-administrativo/login-administrativo.component';
+import { AlteracaoComponent } from './components/alteracao/alteracao.component';
+import { ExclusaoComponent } from './components/exclusao/exclusao.component';
+import { ErroComponent } from './components/erro/erro.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { LoginAdministrativoComponent } from './components/painel-administrativo
     SuasVagasComponent,
     DadosUsuarioComponent,
     PainelAdministrativoComponent,
-    LoginAdministrativoComponent
+    AlteracaoComponent,
+    ExclusaoComponent,
+    ErroComponent
   ],
   imports: [
     BrowserModule,

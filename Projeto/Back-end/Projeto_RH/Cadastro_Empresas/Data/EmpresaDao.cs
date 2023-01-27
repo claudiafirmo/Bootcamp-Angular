@@ -34,26 +34,32 @@ namespace Cadastro_Empresas.Data
             }
         }
 
+        private Empresa CriarEmpresa(EmpresaDTO empresa)
+        {
+            Empresa empresaBuscada = new Empresa()
+            {
+                Id = empresa.id,
+                IdEndereco = empresa.idendereco,
+                Cnpj = empresa.cnpj,
+                Nome = empresa.nome,
+                Site = empresa.site,
+                Telefone = empresa.telefone,
+                RazaoSocial = empresa.razaosocial
+            };
+
+            var endereco = Conn.QueryFirstOrDefault<Endereco>("Select logradouro, cep, cidade, uf, numero from tb_endereco where id = @id", new { id = empresaBuscada.IdEndereco });
+
+            empresaBuscada.EnderecoInfo = endereco;
+            return empresaBuscada;
+        }
+
         private Empresa BuscaEmpresa(int id)
         {
             var empresa = Conn.QueryFirstOrDefault<EmpresaDTO>("Select * from tb_empresa where id = @id", new { id });
             if (empresa != null)
             {
-                Empresa empresaBuscada = new Empresa()
-                {
-                    Id = empresa.id,
-                    IdEndereco = empresa.idendereco,
-                    Cnpj = empresa.cnpj,
-                    Nome = empresa.nome,
-                    Site = empresa.site,
-                    Telefone = empresa.telefone,
-                    RazaoSocial = empresa.razaosocial
-                };
-
-                var endereco = Conn.QueryFirstOrDefault<Endereco>("Select logradouro, cep, cidade, uf, numero from tb_endereco where id = @id", new { id = empresaBuscada.IdEndereco });
-
-                empresaBuscada.EnderecoInfo = endereco;
-                return empresaBuscada;
+            
+                return CriarEmpresa(empresa);
             }
             else
             {
@@ -66,21 +72,7 @@ namespace Cadastro_Empresas.Data
             var empresa = Conn.QueryFirstOrDefault<EmpresaDTO>("Select * from tb_empresa where cnpj = @cnpj", new { cnpj });
             if (empresa != null)
             {
-                Empresa empresaBuscada = new Empresa()
-                {
-                    Id = empresa.id,
-                    IdEndereco = empresa.idendereco,
-                    Cnpj = empresa.cnpj,
-                    Nome = empresa.nome,
-                    Site = empresa.site,
-                    Telefone = empresa.telefone,
-                    RazaoSocial = empresa.razaosocial
-                };
-
-                var endereco = Conn.QueryFirstOrDefault<Endereco>("Select logradouro, cep, cidade, uf, numero from tb_endereco where id = @id", new { id = empresaBuscada.IdEndereco });
-
-                empresaBuscada.EnderecoInfo = endereco;
-                return empresaBuscada;
+                return CriarEmpresa(empresa);
             }
             else
             {
@@ -194,6 +186,8 @@ namespace Cadastro_Empresas.Data
                 int registros = Conn.Execute("DELETE FROM tb_empresa WHERE id = @id", new { id });
 
                 Conn.Execute("DELETE FROM tb_endereco WHERE id = @id", new { id = empresa.IdEndereco });
+                
+                Conn.Execute("DELETE FROM tb_usuarios WHERE nome = @cnpj", new { cnpj = empresa.Cnpj });
                 if (registros > 0)
                 {
 

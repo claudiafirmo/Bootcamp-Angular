@@ -11,17 +11,18 @@
       <h4 class="texto-secundario">Não tem uma conta ainda? Cadastre-se</h4>
       <form class="margem-form mb-5">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="CNPJ">
-          <label for="floatingInput caixa-input">CNPJ</label>
+          <input type="text" class="form-control" id="floatingInput" placeholder="Usuário" [(ngModel)]="user.nome" name="nome">
+          <label for="floatingInput caixa-input">Usuário</label>
         </div>
         <div class="form-floating mb-4">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" [(ngModel)]="user.senha" name="senha">
           <label for="floatingPassword">Senha</label>
         </div>
         <div class="alinhamento-botao">
-        <button type="button" class="btn botao hover" (click)="entrar()">Entrar</button>
+        <button type="button" class="btn botao hover" (click)="validar(user)">Entrar</button>
         </div>
       </form>
+      <div *ngIf="erro" class="alert alert-danger">{{erro}}</div>
     </div>
   </div>
 </div>
