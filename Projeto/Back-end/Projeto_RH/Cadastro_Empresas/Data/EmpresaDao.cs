@@ -126,10 +126,6 @@ namespace Cadastro_Empresas.Data
 
                 int idEmpresa = Conn.QueryFirstOrDefault<int>("SELECT max(id) FROM tb_empresa");
 
-                // Insere usuario para a empresa - usuario = cnpj e senha = cnpj
-                sql = "INSERT INTO tb_usuarios (nome, senha, nivel) VALUES (@cnpj, @senha, 2)";
-                Conn.Execute(sql, new { cnpj = objeto.Cnpj, senha = objeto.Cnpj, });
-
                 return BuscaEmpresa(idEmpresa);
 
             }

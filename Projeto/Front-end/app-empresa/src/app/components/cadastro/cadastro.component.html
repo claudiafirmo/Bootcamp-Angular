@@ -53,8 +53,8 @@
             <option *ngFor="let cidade of cidades" [value]="cidade.nome">{{cidade.nome}}</option>
         </select>
 
-        <!-- <label for="senha" class="form-label titulo-campos">Senha: </label>
-        <input type="text" class="form-control mb-4 caixa-texto" [(ngModel)]="empresa.senha" name="senha"> -->
+        <label for="senha" class="form-label titulo-campos">Defina sua nova senha: </label>
+        <input type="password" class="form-control mb-4 caixa-texto" [(ngModel)]="user.senha" name="senha">
 
         <div class="botao-centralizado espacamento-externo-botao">
             <button type="submit" class="btn botao hover"  (click)="incluir(empresa)">Finalizar cadastro</button>

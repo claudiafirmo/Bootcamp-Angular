@@ -16,8 +16,12 @@ namespace Cadastro_Empresas.Controllers
         }
 
         [HttpPost]
-        public Usuario? PostUsuario(Usuario usuario)
+        public Usuario? PostUsuario(Usuario usuario, [FromQuery(Name = "novo")] bool novo)
         {
+            if (novo)
+            {
+                return usuarioDao.Incluir(usuario);
+            }
             return usuarioDao.Validar(usuario);
         }
     }

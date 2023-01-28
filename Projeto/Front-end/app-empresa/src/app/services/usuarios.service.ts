@@ -15,4 +15,9 @@ export class UsuariosService {
   public postUsuario(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(this.baseUrl, usuario);
   }
+
+  public postUsuarioNovo(usuario: Usuario): Observable<Usuario> {
+    const url = `${this.baseUrl}?novo=true`;
+    return this.http.post<Usuario>(url, usuario);
+  }
 }

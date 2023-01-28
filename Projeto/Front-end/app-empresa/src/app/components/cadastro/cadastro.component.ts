@@ -8,6 +8,7 @@ import { LocalidadesService } from 'src/app/services/localidades.service';
 import { Uf } from 'src/app/interface/LocalidadesApi/Estados/uf';
 import { Municipio } from 'src/app/interface/LocalidadesApi/Cidades/municipio';
 import { Usuario } from 'src/app/classes/usuario';
+import { UsuariosService } from 'src/app/services/usuarios.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -15,7 +16,12 @@ import { Usuario } from 'src/app/classes/usuario';
   styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent implements OnInit {
-  constructor(private router: Router, private empresaService: EmpresaService, private viacep: ViacepService, private localidades: LocalidadesService) { }
+  constructor(
+    private router: Router,
+    private empresaService: EmpresaService,
+    private viacep: ViacepService,
+    private localidades: LocalidadesService,
+    private usuariosService: UsuariosService) { }
 
   ngOnInit(): void {
     this.endereco = { logradouro: '', cep: '', cidade: '', uf: '', numero: undefined };
@@ -27,10 +33,15 @@ export class CadastroComponent implements OnInit {
   endereco!: Endereco;
   estados!: Uf[];
   cidades!: Municipio[];
+  user!: Usuario;
 
   incluir(empresa: Empresa): void {
     empresa.enderecoInfo = this.endereco;
-    this.empresaService.postEmpresa(empresa).subscribe(() => this.router.navigate(['login']))
+    this.empresaService.postEmpresa(empresa).subscribe(
+      resp => {
+        this.user.nome = resp.cnpj;
+        this.usuariosService.postUsuarioNovo(this.user).subscribe(() => this.router.navigate(['login']))
+      });
   }
 
   preencherEnderecoPorCep(cep: string): void {
