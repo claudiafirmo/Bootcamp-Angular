@@ -6,6 +6,7 @@ import { ErroComponent } from './components/erro/erro.component';
 import { ExclusaoComponent } from './components/exclusao/exclusao.component';
 import { HomeEmpresaComponent } from './components/home/home-empresa/home-empresa.component';
 import { LoginComponent } from './components/login/login.component';
+import { DetalhesEmpresaComponent } from './components/painel-administrativo/detalhes-empresa/detalhes-empresa.component';
 import { PainelAdministrativoComponent } from './components/painel-administrativo/painel-administrativo/painel-administrativo.component';
 import { DadosUsuarioComponent } from './components/painel-empresa/dados-usuario/dados-usuario.component';
 import { PainelEmpresaComponent } from './components/painel-empresa/painel-empresa/painel-empresa.component';
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: "painelEmpresa", component: PainelEmpresaComponent, canActivate: [AuthGuard] },
   { path: "painelEmpresa/alterar/:id", component: AlteracaoComponent, canActivate: [AuthGuard] },
   { path: "painelEmpresa/excluir/:id", component: ExclusaoComponent, canActivate: [AuthGuard] },
-  { path: "painelAdministrativo", component: PainelAdministrativoComponent /*, canActivate: [AuthGuard]*/ },
+  { path: "painelAdministrativo", component: PainelAdministrativoComponent, canActivate: [AuthGuard] },
+  { path: "painelAdministrativo/detalhes/:idempresa", component: DetalhesEmpresaComponent, canActivate: [AuthGuard] },
   { path: "erro", component: ErroComponent },
   { path: "**", component: ErroComponent }
 ];

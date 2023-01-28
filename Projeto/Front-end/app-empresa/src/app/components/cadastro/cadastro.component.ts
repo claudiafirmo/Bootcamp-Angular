@@ -33,20 +33,26 @@ export class CadastroComponent implements OnInit {
   endereco!: Endereco;
   estados!: Uf[];
   cidades!: Municipio[];
-  user!: Usuario;
+  user: Usuario = new Usuario();
+  senha!: string;
 
   incluir(empresa: Empresa): void {
     empresa.enderecoInfo = this.endereco;
-    this.empresaService.postEmpresa(empresa).subscribe(
-      resp => {
-        this.user.nome = resp.cnpj;
-        this.usuariosService.postUsuarioNovo(this.user).subscribe(() => this.router.navigate(['login']))
-      });
+    this.empresaService.postEmpresa(empresa).subscribe(resp => this.empresa = resp);
+
+    this.user.nome = this.empresa.cnpj;
+    this.user.senha = this.senha;
+    this.usuariosService.postUsuarioNovo(this.user).subscribe(resp => this.user = resp);
+    this.router.navigate(['/login']);
   }
 
   preencherEnderecoPorCep(cep: string): void {
-    this.viacep.getEnderecoPorCep(cep).subscribe(resposta => this.endereco = { logradouro: resposta.logradouro, cidade: resposta.localidade, uf: resposta.uf, cep: this.endereco.cep, numero: this.endereco.numero });
-    this.listarMunicipiosPorUf(this.endereco.uf);
+    this.viacep.getEnderecoPorCep(cep).subscribe(resposta => {
+      this.endereco = {
+        logradouro: resposta.logradouro, cidade: resposta.localidade, uf: resposta.uf, cep: this.endereco.cep, numero: this.endereco.numero
+      };
+      this.listarMunicipiosPorUf(this.endereco.uf);
+    });
   }
 
   listarEstados(): void {
@@ -55,5 +61,14 @@ export class CadastroComponent implements OnInit {
 
   listarMunicipiosPorUf(uf: string): void {
     this.localidades.getMunicipiosPorUf(uf).subscribe(resposta => this.cidades = resposta);
+  }
+
+  mostrarSenha(): void {
+    const inputSenha = document.getElementById('senha');
+    if (inputSenha?.getAttribute('type') == 'password') {
+      inputSenha?.setAttribute("type", "text");
+    } else {
+      inputSenha?.setAttribute("type", "password");
+    }
   }
 }

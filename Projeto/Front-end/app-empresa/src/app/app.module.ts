@@ -18,6 +18,7 @@ import { PainelAdministrativoComponent } from './components/painel-administrativ
 import { AlteracaoComponent } from './components/alteracao/alteracao.component';
 import { ExclusaoComponent } from './components/exclusao/exclusao.component';
 import { ErroComponent } from './components/erro/erro.component';
+import { DetalhesEmpresaComponent } from './components/painel-administrativo/detalhes-empresa/detalhes-empresa.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ErroComponent } from './components/erro/erro.component';
     PainelAdministrativoComponent,
     AlteracaoComponent,
     ExclusaoComponent,
-    ErroComponent
+    ErroComponent,
+    DetalhesEmpresaComponent
   ],
   imports: [
     BrowserModule,

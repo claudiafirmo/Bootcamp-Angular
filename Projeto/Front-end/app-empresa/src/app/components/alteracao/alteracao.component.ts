@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { throwError } from 'rxjs';
+import { Usuario } from 'src/app/classes/usuario';
 import { Empresa } from 'src/app/interface/EmpresaApi/empresa';
 import { Endereco } from 'src/app/interface/EmpresaApi/endereco';
 import { Municipio } from 'src/app/interface/LocalidadesApi/Cidades/municipio';
 import { Uf } from 'src/app/interface/LocalidadesApi/Estados/uf';
 import { EmpresaService } from 'src/app/services/empresa.service';
 import { LocalidadesService } from 'src/app/services/localidades.service';
+import { UsuariosService } from 'src/app/services/usuarios.service';
 import { ViacepService } from 'src/app/services/viacep.service';
 
 @Component({
@@ -15,27 +17,55 @@ import { ViacepService } from 'src/app/services/viacep.service';
   styleUrls: ['./alteracao.component.css']
 })
 export class AlteracaoComponent {
-  constructor(private router: Router, private empresaService: EmpresaService, private viacep: ViacepService, private localidades: LocalidadesService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private empresaService: EmpresaService,
+    private viacep: ViacepService,
+    private localidades: LocalidadesService,
+    private usuariosService: UsuariosService) { }
 
   storage: Storage = localStorage;
   empresa!: Empresa;
   endereco!: Endereco;
   estados!: Uf[];
   cidades!: Municipio[];
+  user: Usuario = new Usuario();
+  senha!: string;
+  userLogado!: string;
 
   ngOnInit(): void {
-    let userLogado = this.storage.getItem("user_name") as string;
-    this.empresaService.getEmpresaPorCnpj(userLogado).subscribe(
-      resp => {
-        this.empresa = resp;
-        this.endereco = this.empresa.enderecoInfo as Endereco;
-      }
-    );
-    this.listarEstados();
+    this.userLogado = this.storage.getItem("user_name") as string;
+
+    if (this.userLogado.length == 14) {
+      this.empresaService.getEmpresaPorCnpj(this.userLogado).subscribe(
+        resp => {
+          this.empresa = resp;
+          this.endereco = this.empresa.enderecoInfo as Endereco;
+        }
+      );
+      this.usuariosService.getUsuarioCnpj(this.userLogado).subscribe(resp => {
+        this.user = resp;
+      })
+      this.listarEstados();
+    } else {
+      let idempresa = this.route.snapshot.paramMap.get("id") as string;
+      this.empresaService.getEmpresaPorId(idempresa).subscribe(
+        resp => {
+          this.empresa = resp;
+          this.endereco = this.empresa.enderecoInfo as Endereco;
+        }
+      );
+      this.listarEstados()
+    }
   }
 
   Alterar(empresa: Empresa): void {
-    this.empresaService.putEmpresa(empresa).subscribe(() => this.router.navigate(["/painelEmpresa"]), error => this.router.navigate(["/erro"]));
+    this.empresaService.putEmpresa(empresa).subscribe(() => {
+      this.voltar();
+    }, error => this.router.navigate(["/erro"]));
+
+    this.usuariosService.putUsuario(this.user).subscribe(resp => this.user = resp);
   }
 
   preencherEnderecoPorCep(cep: string): void {
@@ -53,5 +83,18 @@ export class AlteracaoComponent {
 
   listarMunicipiosPorUf(uf: string): void {
     this.localidades.getMunicipiosPorUf(uf).subscribe(resposta => this.cidades = resposta);
+  }
+
+  mostrarSenha(): void {
+    const inputSenha = document.getElementById('senha');
+    if (inputSenha?.getAttribute('type') == 'password') {
+      inputSenha?.setAttribute("type", "text");
+    } else {
+      inputSenha?.setAttribute("type", "password");
+    }
+  }
+
+  voltar(): void {
+    this.userLogado.length == 14 ? this.router.navigate(["/painelEmpresa"]) : this.router.navigate(["/painelAdministrativo"])
   }
 }

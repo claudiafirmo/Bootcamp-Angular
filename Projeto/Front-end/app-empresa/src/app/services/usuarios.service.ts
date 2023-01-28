@@ -20,4 +20,13 @@ export class UsuariosService {
     const url = `${this.baseUrl}?novo=true`;
     return this.http.post<Usuario>(url, usuario);
   }
+
+  public getUsuarioCnpj(cnpj: string): Observable<Usuario> {
+    const url = `${this.baseUrl}?cnpj=${cnpj}`;
+    return this.http.get<Usuario>(url);
+  }
+
+  public putUsuario(usuario: Usuario): Observable<Usuario> {
+    return this.http.put<Usuario>(this.baseUrl, usuario);
+  }
 }

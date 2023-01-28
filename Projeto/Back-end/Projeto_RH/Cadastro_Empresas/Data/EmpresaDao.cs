@@ -142,7 +142,7 @@ namespace Cadastro_Empresas.Data
                 AbrirConexao();
 
                 List<Empresa> listaEmpresas = new List<Empresa>();
-                var empresas = Conn.Query<EmpresaDTO>("SELECT * FROM tb_empresa");
+                var empresas = Conn.Query<EmpresaDTO>("SELECT * FROM tb_empresa ORDER BY id ASC");
                 foreach(var item in empresas) 
                 {
                     Empresa empresa = new Empresa()

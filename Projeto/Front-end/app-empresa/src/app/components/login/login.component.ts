@@ -34,4 +34,13 @@ export class LoginComponent implements OnInit {
       }
     });
   }
+
+  mostrarSenha(): void {
+    const inputSenha = document.getElementById('floatingPassword');
+    if (inputSenha?.getAttribute('type') == 'password') {
+      inputSenha?.setAttribute("type", "text");
+    } else {
+      inputSenha?.setAttribute("type", "password");
+    }
+  }
 }

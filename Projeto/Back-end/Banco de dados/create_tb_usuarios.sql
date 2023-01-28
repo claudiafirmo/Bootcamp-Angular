@@ -17,7 +17,7 @@ insert into tb_nivel (descricao) values ('admininstrador'), ('empresa');
 
 select * from tb_nivel;
 select * from tb_usuarios;
-select * from tb_empresa;
+select * from tb_empresa order by id asc;
 
 insert into tb_usuarios (nome, senha, nivel) values 
 ('61194494000187', 'impacta', 2),
@@ -28,3 +28,7 @@ insert into tb_usuarios (nome, senha, nivel) values
 
 insert into tb_usuarios (nome, senha, nivel) values 
 ('142264', 'admin', 1)
+
+delete from tb_empresa where cnpj = '60840512000198';
+
+update tb_usuarios set senha = 'abc' where nome = '85462359856324';

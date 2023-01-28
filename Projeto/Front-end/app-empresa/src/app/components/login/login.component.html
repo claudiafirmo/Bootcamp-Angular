@@ -18,6 +18,12 @@
           <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" [(ngModel)]="user.senha" name="senha">
           <label for="floatingPassword">Senha</label>
         </div>
+        <!-- Botão de ver senha -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" (change)="mostrarSenha()" name="verSenha" id="verSenha">
+          <label for="verSenha" class="form-check-label texto-secundario" style="font-size: 16px;">Ver Senha</label>
+        </div>
+        <!-- Botão de ver senha -->
         <div class="alinhamento-botao">
         <button type="button" class="btn botao hover" (click)="validar(user)">Entrar</button>
         </div>
